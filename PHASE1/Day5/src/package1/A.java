@@ -7,6 +7,8 @@ public class A {
 	
 	protected int z=10;
 	
+	public int p=100;
+	
 	public void method1A() {
 		
 		System.out.println("value of x = " +x);
