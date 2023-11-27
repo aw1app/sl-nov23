@@ -13,7 +13,7 @@ public class D extends A {
 
 	public void method3D(A a) {
 
-		// ERROR - NOT REALLY 
+		// ERROR - NOT REALLY , check Again
 		// System.out.println(" a has x= " + a.z);
 
 	}
