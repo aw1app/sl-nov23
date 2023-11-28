@@ -17,6 +17,12 @@ public class ArraysDemo {
 		for(int i=0; i< ages.length ; i++) {
 			System.out.println(ages[i]);
 		}
+		
+		// another way to print the loop
+		System.out.println("Another approach to looping an array");
+		for(int i : ages) {
+			System.out.println(i);
+		}
 
 	}
 
