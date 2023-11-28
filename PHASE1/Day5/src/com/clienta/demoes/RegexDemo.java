@@ -33,7 +33,7 @@ public class RegexDemo {
 		
 		// Email matching
 		String email = "aksingh@yahoo.co.in";
-		String emailRegex = "^[a-zA-Z0-9_.-]+@@(.+)$";
+		String emailRegex = "^[a-zA-Z0-9_.-]+@(.+)$";
 		Pattern emailPattern = Pattern.compile(emailRegex);
 		Matcher emailMatcher = emailPattern.matcher(email);
 		
@@ -42,6 +42,15 @@ public class RegexDemo {
 		else System.out.println("\n The given text is NOT a valid email");
 		
 
+		// Challenge 5
+		// Given any number, check if it is a valid 10 digit phone number
+		// and starting with either 7 or 8 or 9.
+		// SOLUTION : "^[789]\\d{9}$"
+		
+		// SOLUTION 2 : ^[789][0-9]{9}$
+		
+				
+				
 	}
 
 }
