@@ -3,7 +3,7 @@ package com.clienta;
 import java.util.Date;
 
 public class Patient {
-	String name;
+	public String name;
 	String wardOf; // camel case letter
 	float age;
 	String diseaseType;
