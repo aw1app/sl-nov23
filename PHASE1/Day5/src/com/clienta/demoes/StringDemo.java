@@ -30,8 +30,7 @@ public class StringDemo {
 		// Recommended way to compare strings	
 		System.out.println("Testing string equality with .equals method");
 		if(s3.equals(s1)) {
-			System.out.println("s3==s1 is true");
-			
+			System.out.println("s3==s1 is true");			
 		}
 		else {			
 			System.out.println("s3==s1 is false");
