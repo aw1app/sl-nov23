@@ -3,13 +3,13 @@ package com.clienta;
 import java.util.Date;
 
 public class Patient {
-	public String name;
+	private String name;
 	String wardOf; // camel case letter
 	float age;
 	String diseaseType;
 	long phoneNumber;
 	
-	int id;
+	private int id;
 	Date dob;
 	String gender;
 	String address;

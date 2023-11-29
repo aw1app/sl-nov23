@@ -15,7 +15,6 @@ public class CollectionsDemo {
 		
 		 demoMap();
 		 
-		 // One line test
 		
 	}
 	
