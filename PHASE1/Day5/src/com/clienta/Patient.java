@@ -13,6 +13,31 @@ public class Patient {
 	Date dob;
 	String gender;
 	String address;
+	
+	
+
+	public Patient(String name, float age, int id) {
+//		super();
+		this.name = name;
+		this.age = age;
+		this.id = id;
+	}
+	
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+
 
 	float getAge() {
 		return this.age;

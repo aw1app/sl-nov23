@@ -15,6 +15,16 @@ public class CollectionsDemo {
 		
 	}
 	
+	public static void demoMap(){
+		Patient p1 = new Patient("Sundar",23.6f,1);
+		Patient p2 = new Patient("Bala",53.6f,2);
+		Patient p3 = new Patient("Sameer",23.7f,3);
+		Patient p4 = new Patient("Shaji",29.6f,4);
+		
+		Map<Float,Patient> patientMap = new HashMap<Float,Patient>();
+		
+	}
+	
 	public static void demoSet() {
 		System.out.println("Set  Demo");
 		Doctor d1 = new Doctor(1,"Madan",67.5f);
@@ -22,7 +32,7 @@ public class CollectionsDemo {
 		Doctor d3 = new Doctor(3,"Suzi",60.5f);
 		Doctor d4 = new Doctor(4,"Patrick",67f);
 		
-		HashSet<Doctor> setOfDoctors = new HashSet<Doctor>();
+		Set<Doctor> setOfDoctors = new HashSet<Doctor>();
 		setOfDoctors.add(d1);
 		setOfDoctors.add(d2);
 		setOfDoctors.add(d3);
@@ -76,7 +86,7 @@ public class CollectionsDemo {
 		};
 		
 		// 
-		ArrayList<Doctor> listOfDoctors1 = new ArrayList<Doctor>();
+		List<Doctor> listOfDoctors1 = new ArrayList<Doctor>();
 		
 		listOfDoctors1.add(d1);
 		listOfDoctors1.add(d2);
@@ -91,8 +101,7 @@ public class CollectionsDemo {
 			System.out.printf("Doctor name is %s and age is %s \n",tempDoctor.getName(),tempDoctor.getAge());
 		};
 		
-		Patient p1 = new Patient();
-		p1.name="Sundar";
+		Patient p1 = new Patient("Sundar",23.6f,1);
 		
 		// ERROR listOfDoctors1.add(p1);
 	
