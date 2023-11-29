@@ -1,6 +1,6 @@
 package com.clienta;
 
-public abstract class Receptionist {
+abstract public class Receptionist {
 	
 	abstract public void announce(String message);
 	
@@ -9,3 +9,6 @@ public abstract class Receptionist {
 	}
 
 }
+
+
+/// Abstract class are making the design part simpler focusing on what to do rather than how to do?

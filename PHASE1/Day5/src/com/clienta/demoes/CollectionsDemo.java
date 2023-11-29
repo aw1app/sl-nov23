@@ -80,7 +80,7 @@ public class CollectionsDemo {
 		Doctor d3 = new Doctor(3,"Suzi",60.5f);
 		Doctor d4 = new Doctor(4,"Patrick",67f);
 		
-		ArrayList listOfDoctors = new ArrayList();
+		List listOfDoctors = new ArrayList();
 		
 		listOfDoctors.add(d1);
 		listOfDoctors.add(d2);
