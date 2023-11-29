@@ -38,11 +38,11 @@ public class Patient {
 
 
 
-	float getAge() {
+	public float getAge() {
 		return this.age;
 	}
 
-	void setAge(float age) {
+	public void setAge(float age) {
 		this.age = age;
 
 	}

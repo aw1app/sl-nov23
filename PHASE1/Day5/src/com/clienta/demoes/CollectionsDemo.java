@@ -11,7 +11,9 @@ public class CollectionsDemo {
 		
 		 //demoList();
 		
-		 demoSet();
+		 // demoSet();
+		
+		 demoMap();
 		
 	}
 	
@@ -21,7 +23,15 @@ public class CollectionsDemo {
 		Patient p3 = new Patient("Sameer",23.7f,3);
 		Patient p4 = new Patient("Shaji",29.6f,4);
 		
-		Map<Float,Patient> patientMap = new HashMap<Float,Patient>();
+		Map<Integer,Patient> patientMap = new HashMap<Integer,Patient>();
+		patientMap.put(p1.getId(), p1);
+		patientMap.put(p2.getId(), p2);
+		patientMap.put(p3.getId(), p3);
+		patientMap.put(p4.getId(), p4);	
+		
+		//Now we search for a patient given his id
+		Patient p = patientMap.get(3);
+		System.out.printf("Details of the searched patient :%s %s %s \n",p.getId(), p.getName(), p.getAge());
 		
 	}
 	
