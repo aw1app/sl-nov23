@@ -21,8 +21,7 @@ public class Patient {
 		this.name = name;
 		this.age = age;
 		this.id = id;
-	}
-	
+	}	
 	
 
 	public String getName() {
