@@ -29,9 +29,16 @@ public class CollectionsDemo {
 		patientMap.put(p3.getId(), p3);
 		patientMap.put(p4.getId(), p4);	
 		
-		//Now we search for a patient given his id
+		//Now we search for a patient given his id		
 		Patient p = patientMap.get(3);
 		System.out.printf("Details of the searched patient :%s %s %s \n",p.getId(), p.getName(), p.getAge());
+		
+		// To print all patients in the map
+		System.out.println("");
+		System.out.println("** print all patients in the map **");
+		for(Patient pat: patientMap.values()) {
+			System.out.printf("Details of the searched patient :%s %s %s \n",pat.getId(), pat.getName(), pat.getAge());
+		}
 		
 	}
 	
