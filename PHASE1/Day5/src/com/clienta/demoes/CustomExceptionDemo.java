@@ -2,7 +2,7 @@ package com.clienta.demoes;
 
 import java.util.Scanner;
 
-import com.clienta.exceptions.PatientReportNotFound;
+import com.clienta.exceptions.PatientReportNotFoundException;
 
 public class CustomExceptionDemo {
 
@@ -12,7 +12,16 @@ public class CustomExceptionDemo {
 		System.out.println(" Enter the id of the pateint whose record is to be found  ");
 		int id = sc.nextInt();
 
-		System.out.println("Thank you.");
+		try {
+			String response = PatientRecord.findRecord(id);
+			System.out.println(response);
+		} catch (PatientReportNotFoundException e) {
+			System.out.println(e.getMessage());
+		}finally {
+			System.out.println("Thank you.");
+		}
+
+		System.out.println("Exiting");
 
 	}
 
@@ -20,12 +29,12 @@ public class CustomExceptionDemo {
 
 class PatientRecord {
 
-	static String findRecord(int id) {
+	static String findRecord(int id) throws PatientReportNotFoundException {
 		// assume that patient records are available only for id from 1 to 10.
-		if (id >= 0 && id <= 10) {
+		if (id > 0 && id <= 10) {
 			return " Found the record. Will Email it";
 		} else {
-			throw new PatientReportNotFound("records with such id not found");
+			throw new PatientReportNotFoundException("records with such id not found");
 		}
 	}
 }
