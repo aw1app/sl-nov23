@@ -6,7 +6,7 @@ public class MyThread1 extends Thread {
 
 		for (int i = 0; i < 10; i++) {
 			
-			System.out.println("Inside MyThread1 i=" + i);
+			System.out.println(this.getName()+" " + i);
 			
 			try {
 				Thread.sleep(10);
