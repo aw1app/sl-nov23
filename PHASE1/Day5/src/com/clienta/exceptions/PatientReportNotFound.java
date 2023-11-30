@@ -8,5 +8,6 @@ public class PatientReportNotFound extends Exception{
 		super(message);		
 	}
 	
+	
 
 }
