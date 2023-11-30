@@ -10,6 +10,8 @@ public class PolymorphismDemo {
 		System.out.println("Base salary of pEmp = "+pEmp.baseSalary);
 		
 		System.out.println("Name of pEmp = "+ pEmp.getName() ) ;
+		
+		System.out.println("Base salary of pEmp = "+ pEmp.getSalary() ) ;
 
 	}
 
