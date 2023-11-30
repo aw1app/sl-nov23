@@ -10,10 +10,59 @@ public class FileIODemo {
 
 	public static void main(String[] args) {
 
-		// fileInfoDemo();
-		//fileReadDemo();
+		// fileInfoDemo(); // read 1 byte at a atime
+		// fileReadDemo(); // read 1 char at a atime
+
+		//fileReadDemo3();// read all content
 		
-		fileReadDemo3();	
+		// fileWriteDemo1();
+		fileWriteAppendModeDemo2();
+
+	}
+	
+	public static void fileWriteAppendModeDemo2() {
+		String testFilePath = "F:\\Users\\home\\git\\sl-nov23\\TestOut.txt";
+
+		FileWriter writer = null;
+		try {
+			writer = new FileWriter(testFilePath,true); // true is for append mode
+
+			writer.write("\nblah blah");
+			
+			System.out.println("Done");
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	public static void fileWriteDemo1() {
+		String testFilePath = "F:\\Users\\home\\git\\sl-nov23\\TestOut.txt";
+
+		FileWriter writer = null;
+		try {
+			writer = new FileWriter(testFilePath, false);// false is for overwrite mode
+
+			writer.write("Hello ddffdfdf World");
+			
+			System.out.println("Done");
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 
 	}
 
@@ -23,9 +72,10 @@ public class FileIODemo {
 		try {
 			List<String> lines = Files.readAllLines(Paths.get(testFilePath));
 
+			// Print only those lines that has Saturday in it
 			for (String line : lines) {
-				if(line.contains("Saturday"))
-				System.out.println(line);
+				if (line.contains("Saturday"))
+					System.out.println(line);
 			}
 
 		} catch (FileNotFoundException e) {
