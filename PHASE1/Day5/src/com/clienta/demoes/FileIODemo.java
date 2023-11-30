@@ -16,8 +16,20 @@ public class FileIODemo {
 		//fileReadDemo3();// read all content
 		
 		// fileWriteDemo1();
-		fileWriteAppendModeDemo2();
+		//fileWriteAppendModeDemo2();
+		
+		fileCreateDemo2();
 
+	}
+	
+	public static void fileCreateDemo2() {
+		String testFilePath = "F:\\Users\\home\\git\\sl-nov23\\Test1.txt";
+		File f = new File(testFilePath);
+		try {
+			f.createNewFile();			
+		} catch (IOException e) {			
+			e.printStackTrace();
+		}		
 	}
 	
 	public static void fileWriteAppendModeDemo2() {
