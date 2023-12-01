@@ -8,12 +8,13 @@ public class MyThread extends Thread {
 		for (int i = 0; i < 10; i++) {
 			
 			System.out.println(this.getName()+" " + i);
+			//
 			
-//			try {
-//				Thread.sleep(10);
-//			} catch (InterruptedException e) {
-//
-//			}
+			try {
+				Thread.sleep(1000);// sleep for 10 ms
+			} catch (InterruptedException e) {
+
+			}
 		}
 	}
 

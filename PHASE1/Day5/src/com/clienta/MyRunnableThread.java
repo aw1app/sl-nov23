@@ -9,11 +9,11 @@ public class MyRunnableThread implements Runnable{
 			
 			System.out.println("MyRunnableThread " + i);
 			
-//			try {
-//				Thread.sleep(10);
-//			} catch (InterruptedException e) {
-//
-//			}
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+
+			}
 		}
 	}
 
