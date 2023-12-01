@@ -23,7 +23,7 @@ public class MyThread2 extends Thread {
 
 			this.data.a = 10;
 			System.out.println("data.a has set to 10");
-			data.notify();
+			data.notifyAll();
 			System.out.println("MyThread2 I have notified others.");
 		}
 

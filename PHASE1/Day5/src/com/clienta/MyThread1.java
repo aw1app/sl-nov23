@@ -30,10 +30,7 @@ public class MyThread1 extends Thread{
 					
 				}
 			}
-		}
-		
-
-		
+		}		
 	}
 
  //Solution using wait and notify mechanism
@@ -44,7 +41,7 @@ public class MyThread1 extends Thread{
 		synchronized(data) {
 		
 		while(true) {
-			System.out.println("Inside MyThread1 " + counter++);
+			System.out.println("Inside MyThread1 counter=" + counter++) ;
 			System.out.println("MyThread1 checking for data.a==10 ");
 			if(data.a==10) {
 				System.out.println("My job is done!");
