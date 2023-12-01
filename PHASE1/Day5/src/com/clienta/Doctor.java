@@ -1,6 +1,8 @@
 package com.clienta;
 
-public class Doctor {
+import java.io.Serializable;
+
+public class Doctor implements Serializable{
 
 	// Properties/ Fields / Variables
 	String name;
@@ -38,7 +40,7 @@ public class Doctor {
 		return this.age;
 	}
 
-	void setAge(float age) {
+	public void setAge(float age) {
 		this.age = age;
 	}
 
