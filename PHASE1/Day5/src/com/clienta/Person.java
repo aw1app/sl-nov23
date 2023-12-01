@@ -13,9 +13,9 @@ public class Person extends Thread{
 	@Override
 	public void run() {
 		
-		synchronized (postman) {
+		//synchronized (postman) {
 			postman.send(msg);
-		}
+		//}
 		
 	}
 

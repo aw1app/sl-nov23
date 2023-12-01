@@ -4,7 +4,7 @@ public class Postman {
 	
 	String msg;
 	
-	public void send(String msg) {
+	synchronized public void send(String msg) {
 		
 		System.out.println("Sending your "  + msg ); 
 		
