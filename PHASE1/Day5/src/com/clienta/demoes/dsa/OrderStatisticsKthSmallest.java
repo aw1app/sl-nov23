@@ -1,5 +1,7 @@
 package com.clienta.demoes.dsa;
 
+import java.util.Arrays;
+
 public class OrderStatisticsKthSmallest {
 
 	public static void main(String[] args) {
@@ -9,7 +11,11 @@ public class OrderStatisticsKthSmallest {
 		
 		int n =arr.length;
 		
+		System.out.println("Given array: "+ Arrays.toString(arr));
+		
 		int result = findKtheSmallest(arr,k);
+		
+		System.out.println(k+"th smallest : "+result);
 
 	}
 
@@ -40,12 +46,40 @@ public class OrderStatisticsKthSmallest {
 		if(pivotIndex==k)
 			return arr[pivotIndex];
 		
-		if(pivotIndex<k)
+		if(pivotIndex < k)
 			return quickSelect(arr,pivotIndex+1,right,k);
 		else
 			return quickSelect(arr,left,pivotIndex-1,k);
 		
 	}
+
+	private static int partition(int[] arr, int left, int right) {
+		int pivotValue=arr[right];
+		int pivotIndex =left; 
+		
+		
+		for(int i=left; i<right; i++) {
+			
+			if (arr[i] < pivotValue) {
+				swap(arr, i , pivotIndex);
+				pivotIndex++;
+			}
+			
+		};
+		
+		swap(arr,pivotIndex, right );
+		
+		return pivotIndex;		
+	}
+
+	private static void swap(int[] arr, int i, int j) {
+		int temp = arr[i];
+		 arr[i] =  arr[j];
+		 arr[j] =  temp;	
+		
+	}
+	
+	
 	
 	
 
