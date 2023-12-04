@@ -26,10 +26,7 @@ public class OrderStatisticsKthSmallest {
 		};
 		
 		
-		int res = quickSelect(arr, 0, arr.length-1,k-1);
-		
-		
-		return res;
+		return quickSelect(arr, 0, arr.length-1,k-1);
 	}
 
 	private static int quickSelect(int[] arr, int left, int right, int k) {
