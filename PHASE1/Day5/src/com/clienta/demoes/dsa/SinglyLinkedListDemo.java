@@ -14,7 +14,10 @@ public class SinglyLinkedListDemo {
 		sll1.insert(14);
 		sll1.insert(40);
 		sll1.printSLL();
-
+		
+		System.out.println("Deleting 14..");
+		sll1.delete(14);
+		sll1.printSLL();
 	}
 
 }
@@ -45,9 +48,8 @@ class SinglyLinkedList {
 			head = newNode;
 		}
 
-		else 
-		{
-		// SLL is not empty
+		else // SLL is not empty
+		{		
 		// we have to traverse till the Tail and the set the tail's next to our newNode
 		Node current_Node = head;
 
@@ -58,6 +60,33 @@ class SinglyLinkedList {
 		current_Node.next = newNode;
 		}
 
+	}
+	
+	void delete(int key) {
+		if(head==null)
+			System.err.println("SLL is empty. So nothing to delete");
+		
+		Node current_Node = head;
+		
+		if(head.data == key) {
+			this.head = this.head.next; 
+			System.out.println("Found the key at head and deleted ");
+		}
+		
+		else {
+			Node prev = null;
+			
+			while (current_Node != null && current_Node.data != key ) {
+				prev = current_Node;
+				current_Node = current_Node.next;
+			};
+			
+			prev.next = current_Node.next;
+			
+		}
+		
+		
+		
 	}
 	
 	
