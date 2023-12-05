@@ -14,6 +14,9 @@ public class StackImplDemo {
 		stack.push(28);
 		stack.displayStack();
 		
+		stack.push(67);
+		stack.push(11);
+		stack.displayStack();
 	}
 
 }
@@ -33,7 +36,7 @@ class MyStack{
 	void push(int val) {
 		
 		if (TOP==capacity-1)
-			System.out.println("Stack is full. cannot add..");
+			System.out.println("Stack is full. cannot add.." + val);
 		
 		else {
 			TOP=TOP+1;
@@ -44,8 +47,17 @@ class MyStack{
 	
 	int pop() {
 		
+		int poppedVal = -1;
 		
-		return 0;
+		if (TOP==-1) {
+			System.out.println("Stack Underflow!!!");
+		} else {
+			poppedVal = items[TOP];
+			System.out.println(items[TOP] + " has been deleted from the stack");			
+			TOP--;
+		}
+		
+		return poppedVal;
 	}
 	
 	void displayStack(){
