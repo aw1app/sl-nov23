@@ -14,14 +14,14 @@ public class MatrixMultiplicationDemo {
 		int[][] secondMatrix = { {2, 3}, {-9, 0}, {0, 4} }; // 3 * 2 matrix
 		
 		System.out.println("Matrix A ");
-		for(int [] a: firstMatrix) {
-			System.out.println(Arrays.toString(a));
+		for(int [] x: firstMatrix) {
+			System.out.println(Arrays.toString(x));
 		};
 		
 		System.out.println("\n");
 		System.out.println("Matrix B ");
-		for(int [] a: secondMatrix) {
-			System.out.println(Arrays.toString(a));
+		for(int [] x: secondMatrix) {
+			System.out.println(Arrays.toString(x));
 		};
 		
 		
@@ -30,8 +30,8 @@ public class MatrixMultiplicationDemo {
 		
 		System.out.println("\n");
 		System.out.println("Matrix C  = A*B is ");
-		for(int [] a: resultMatrix) {
-			System.out.println(Arrays.toString(a));
+		for(int [] x: resultMatrix) {
+			System.out.println(Arrays.toString(x));
 		};
 
 	}
@@ -51,8 +51,7 @@ public class MatrixMultiplicationDemo {
 				
 			}
 			
-		}		
-		
+		}			
 		
 		return resultMatrix;
 	}
