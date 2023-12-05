@@ -15,10 +15,10 @@ public class RangeQueries {
 //			System.out.println(Arrays.toString(a));
 //		};
 		
-		int i=3;
-		int j=5;
+		int i=2;
+		int j=7;
 		int result = rangeQuery(i, j);
-		System.out.println("Sum (2,5 ) = " + result);
+		System.out.println("Sum (3,6 ) = " + result);
 
 	}
 
@@ -55,7 +55,7 @@ public class RangeQueries {
 			
 			if (L + (1 << j) - 1 <= R) {
 				
-				// System.out.println("rangeQuery. Now In column "+j + " and picked up " +  sparseTable[L][j]);
+				 System.out.println("rangeQuery. Now In column "+j + " and picked up " +  sparseTable[L][j]);
 				
 				result = result + sparseTable[L][j];
 				L += 1 << j;
