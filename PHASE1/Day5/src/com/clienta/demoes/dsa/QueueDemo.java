@@ -67,7 +67,7 @@ class MyQueue {
 			FRONT++;
 			
 			//After deque of current of element check if the queue is empty 
-			if(FRONT>=REAR) {
+			if(FRONT>REAR) {
 				FRONT=-1;
 				REAR=-1;
 			}
