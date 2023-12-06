@@ -22,8 +22,7 @@ public class LinearSearchDemo {
 		
 		// Another search 
 		key = 23;
-		indexOfTheKey = linearSearch(arr, key);
-		
+		indexOfTheKey = linearSearch(arr, key);		
 		
 		if (indexOfTheKey!=-1)
 			System.out.println("Key " + key + " was found in the array at index "+ indexOfTheKey);
