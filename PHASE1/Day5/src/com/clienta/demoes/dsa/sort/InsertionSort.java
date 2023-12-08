@@ -29,8 +29,12 @@ public class InsertionSort {
 				arr[j + 1] = arr[j];
 				arr[j] =temp;
 				
+				//System.out.println("In iteration " +i+ " : Partially Sorted array: " + Arrays.toString(arr));
+				
 				j--;				
 			}
+			
+			//System.out.println("");
 			
 		}
 		
