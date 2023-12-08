@@ -44,7 +44,6 @@ public class MergeSortDemo {
 				combined[k++] = left[i++];
 			else
 				combined[k++] = right[j++];
-
 		}
 		
 		// take the remaining left elements of left and right array
