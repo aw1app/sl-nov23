@@ -15,7 +15,14 @@ public class HelloWorld extends HttpServlet {
 	public void init(ServletConfig config) {
 		/// open  DB connection
 		/// open the file handles foor reading writing 
+		
 		System.out.println("Inside init method");
+		
+		String dbusername = config.getInitParameter("dbusername");
+		String dbpassword = config.getInitParameter("dbpassword");
+		
+		System.out.printf("DB username and password as configured in the web.xml for this servlet is : %s and %s\n",dbusername,dbpassword );
+		
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

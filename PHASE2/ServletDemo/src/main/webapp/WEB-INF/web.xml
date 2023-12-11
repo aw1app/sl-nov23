@@ -5,7 +5,19 @@
     <display-name>HelloWorld</display-name>
     <servlet-name>HelloWorld</servlet-name>
     <servlet-class>com.simpli.HelloWorld</servlet-class>
+    
+    <init-param>
+    <param-name>dbusername</param-name>
+    <param-value>santosh</param-value>
+    </init-param>    
+    
+     <init-param>
+    <param-name>dbpassword</param-name>
+    <param-value>453fae$$</param-value>
+    </init-param>    
+    
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>HelloWorld</servlet-name>
     <url-pattern>/HW</url-pattern>
