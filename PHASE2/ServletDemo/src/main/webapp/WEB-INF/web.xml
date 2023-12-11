@@ -19,5 +19,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
- 
+  <servlet>
+    <description></description>
+    <display-name>UserLoginFormProcessingServlet</display-name>
+    <servlet-name>UserLoginFormProcessingServlet</servlet-name>
+    <servlet-class>com.simpli.UserLoginFormProcessingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLoginFormProcessingServlet</servlet-name>
+    <url-pattern>/UserLoginFormProcessingServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
