@@ -38,7 +38,11 @@ public class HelloWorld extends HttpServlet {
 		
 		pw.write("<br> This server's serverInfo " + serverInfo);
 		
+		// Include the content of some other servlet
 		sc.getRequestDispatcher("/SomeServlet").include(request, response);
+		
+		// continue with our's
+		pw.write("<br> TExtra content from the current HW servlet " + serverInfo);
 
 		pw.close();
 	}
