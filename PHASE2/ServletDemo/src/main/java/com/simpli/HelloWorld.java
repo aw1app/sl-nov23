@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -31,6 +32,13 @@ public class HelloWorld extends HttpServlet {
 		PrintWriter pw = response.getWriter(); // CTRL +Shift + O
 
 		pw.write("<b>Hello</b> World, GET!");
+		
+		ServletContext sc = request.getServletContext();
+		String serverInfo = sc.getServerInfo();		
+		
+		pw.write("<br> This server's serverInfo " + serverInfo);
+		
+		sc.getRequestDispatcher("/SomeServlet").include(request, response);
 
 		pw.close();
 	}

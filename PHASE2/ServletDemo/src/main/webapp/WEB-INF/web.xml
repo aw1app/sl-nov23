@@ -5,19 +5,15 @@
     <display-name>HelloWorld</display-name>
     <servlet-name>HelloWorld</servlet-name>
     <servlet-class>com.simpli.HelloWorld</servlet-class>
-    
     <init-param>
-    <param-name>dbusername</param-name>
-    <param-value>santosh</param-value>
-    </init-param>    
-    
-     <init-param>
-    <param-name>dbpassword</param-name>
-    <param-value>453fae$$</param-value>
-    </init-param>    
-    
+      <param-name>dbusername</param-name>
+      <param-value>santosh</param-value>
+    </init-param>
+    <init-param>
+      <param-name>dbpassword</param-name>
+      <param-value>453fae$$</param-value>
+    </init-param>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>HelloWorld</servlet-name>
     <url-pattern>/HW</url-pattern>
@@ -40,5 +36,15 @@
   <servlet-mapping>
     <servlet-name>UserLoginFormProcessingServlet</servlet-name>
     <url-pattern>/UserLoginFormProcessingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SomeServlet</display-name>
+    <servlet-name>SomeServlet</servlet-name>
+    <servlet-class>com.simpli.SomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SomeServlet</servlet-name>
+    <url-pattern>/SomeServlet</url-pattern>
   </servlet-mapping>
 </web-app>
