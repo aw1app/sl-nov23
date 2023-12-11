@@ -19,14 +19,5 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
- <!--  <servlet>
-    <description></description>
-    <display-name>GetPostDemoServlet</display-name>
-    <servlet-name>GetPostDemoServlet</servlet-name>
-    <servlet-class>com.simpli.GetPostDemoServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>GetPostDemoServlet</servlet-name>
-    <url-pattern>/gpdemo</url-pattern>
-  </servlet-mapping> -->
+ 
 </web-app>
