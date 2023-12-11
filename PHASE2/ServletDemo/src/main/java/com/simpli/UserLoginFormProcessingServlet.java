@@ -26,6 +26,8 @@ public class UserLoginFormProcessingServlet extends HttpServlet {
 		
 		pw.write("Hey "+ uname + ", thanks for logging in!");
 		
+		response.setHeader("training-by","simplilearn");
+		
 		pw.close();
 
 	}
