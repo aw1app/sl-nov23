@@ -8,14 +8,18 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/VNPServlet")
-public class VotingNotPossibleServlet extends HttpServlet {
+public class ServletA extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		PrintWriter pw = response.getWriter();
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Inside ServletA doPost");
 		
-		pw.write("<div style='color:red'>You are not eleigible to vote.</div>");
+		PrintWriter pw = response.getWriter();
+
+		
+		pw.write("You are eligible to vote!. These are list of benefits you will get when voting...");
 		
 		pw.close();
 	}

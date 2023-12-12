@@ -19,7 +19,7 @@ public class VotingDecisionServlet extends HttpServlet {
 		int age = Integer.parseInt(ageStr);
 
 		if (age < 18)
-			request.getRequestDispatcher("/VotingNotPossibleServlet").forward(request, response);
+			request.getRequestDispatcher("/VNPServlet").forward(request, response);
 		else
 			request.getRequestDispatcher("/VotingPossibleServlet").forward(request, response);
 
