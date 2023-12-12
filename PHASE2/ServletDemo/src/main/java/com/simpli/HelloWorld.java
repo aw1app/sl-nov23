@@ -29,20 +29,24 @@ public class HelloWorld extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("Inside doGet method");
-		PrintWriter pw = response.getWriter(); // CTRL +Shift + O
-
-		pw.write("<b>Hello</b> World, GET!");
 		
+		PrintWriter pw = response.getWriter(); // CTRL +Shift + O
+		pw.write("<hr>");
+		
+		// Include the content of some other servlet
 		ServletContext sc = request.getServletContext();
+		
+		
+
+		pw.write("<b>Hello</b> World, GET!");		
+		
 		String serverInfo = sc.getServerInfo();		
 		
 		pw.write("<br> This server's serverInfo " + serverInfo);
 		
-		// Include the content of some other servlet
-		sc.getRequestDispatcher("/SomeServlet").include(request, response);
+		sc.getRequestDispatcher("/HeaderServlet").include(request, response);
 		
-		// continue with our's
-		pw.write("<br> TExtra content from the current HW servlet " + serverInfo);
+		sc.getRequestDispatcher("/FooterServlet").include(request, response);
 
 		pw.close();
 	}
