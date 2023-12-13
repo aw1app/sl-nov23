@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Random;
 
 public class LoginServlet extends HttpServlet {
@@ -16,12 +17,21 @@ public class LoginServlet extends HttpServlet {
 		
 		String userId = request.getParameter("userid");
 		
-		Cookie c1 = new Cookie("userId", userId);
-		c1.setMaxAge(30); // remove this cookie after 30 secs. If 0 secs it means delete immediately, after access in the browser
 		
-		response.addCookie(c1);
+		// Pass the above userid to the other servlet (dashboard servlet)
+		//creating a new hidden form field
 		
-		response.sendRedirect("dashboard");
+		PrintWriter out = response.getWriter();
+        out.println("<form action='dashboard' method='POST'>");
+        out.println("<input type='hidden' name='userid' value='"+userId+"'>");
+        out.println("<input type='submit' value='submit' >");
+        out.println("</form>");
+        out.println("<script>document.forms[0].submit();</script>");
+        
+        out.close();
+		
+		
+		
 	}
 
 }
