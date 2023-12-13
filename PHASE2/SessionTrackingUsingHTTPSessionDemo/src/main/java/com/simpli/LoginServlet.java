@@ -16,8 +16,8 @@ public class LoginServlet extends HttpServlet {
 		
 		String userId = request.getParameter("userid");
 		
-		//Create a HttpSession and put the userid in it.
-		HttpSession httpSession = request.getSession(true);
+		//Create a new HttpSession and put the userid in it.
+		HttpSession httpSession = request.getSession();
 		
 		// request.getSession(true) - here true means, if an http session was created for this user, may be in some other
 		// servlet or in this servlet itself some time back, then use that session
