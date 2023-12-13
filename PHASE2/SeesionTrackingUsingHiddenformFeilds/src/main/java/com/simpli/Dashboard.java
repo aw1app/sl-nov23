@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 
 public class Dashboard extends HttpServlet {
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw = response.getWriter();
 		
 		String userId = request.getParameter("userid");
@@ -19,6 +19,10 @@ public class Dashboard extends HttpServlet {
 		
 		pw.close();
 		
+	}
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request,response);
 	}
 	
 }
