@@ -26,8 +26,21 @@ public class LoginServlet extends HttpServlet {
 		
 		httpSession.setAttribute("userId", userId);
 		
+		
+		ShoppingCart sc= new ShoppingCart();
+		sc.productNames = new String[]{"Dell", "Phillips TV", "Bajaj 2 wheeler"};
+		httpSession.setAttribute("mycart", sc);
+		
+		
 		response.sendRedirect("dashboard");	
 
 	}
 
+}
+
+
+class ShoppingCart{
+	
+	String[] productNames;
+	
 }
