@@ -22,7 +22,10 @@ public class DashboardServlet extends HttpServlet {
 			for (int i = 0; i < cookies.length; i++) {
 
 				pw.printf("Cookie name %s, Cookie value %s <br>", cookies[i].getName(), cookies[i].getValue());
-
+				
+				if(cookies[i].getName().equals("userId")) {
+					pw.printf("Welcome " + cookies[i].getValue()); 
+				}
 			}
 		} else {
 			pw.printf("No cookies found!");
