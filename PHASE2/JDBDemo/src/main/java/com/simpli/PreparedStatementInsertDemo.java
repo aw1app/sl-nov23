@@ -8,7 +8,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Properties;
 
@@ -39,13 +41,29 @@ public class PreparedStatementInsertDemo extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		PrintWriter pw = response.getWriter();
+		
 		String amtStr = request.getParameter("amount");
 		float amount = Float.parseFloat(amtStr);
 		
 		String customerName =  request.getParameter("customer");
 		
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO ORDERS VALUES(null,?,?)");
+			
+			preparedStatement.setFloat(1, amount);
+			preparedStatement.setString(2, customerName);
+			
+			int count = preparedStatement.executeUpdate();
+			
+			pw.printf("<b> %s </b> inserted succesfully",count);
+			
+		} catch (SQLException e) {			
+			e.printStackTrace();
+			pw.printf("Inserted Failed!!");
+		}
 		
-		
+		pw.close();
 		
 	}
 
