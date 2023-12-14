@@ -11,8 +11,6 @@
     <url-pattern>/query-demo</url-pattern>
   </servlet-mapping>
   <display-name>JDBCQueryDemo</display-name>
-  
-  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -21,4 +19,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>JDBCInsertDemo</display-name>
+    <servlet-name>JDBCInsertDemo</servlet-name>
+    <servlet-class>com.simpli.JDBCInsertDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JDBCInsertDemo</servlet-name>
+    <url-pattern>/insert-demo</url-pattern>
+  </servlet-mapping>
 </web-app>
