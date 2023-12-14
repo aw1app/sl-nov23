@@ -38,17 +38,19 @@ public class JDBCQueryDemo extends HttpServlet {
 
 			ResultSet rs = stmt.executeQuery("SELECT * FROM ORDERS");
 
-			// 4. Process the results
-			// Loop through all the rows of the query results
+			// 4. Process the results. Loop through all the rows of the query results
 			pw.write("QUERY RESULTS <hr>");
+			pw.write("<table border=1>");
+			pw.write("<th>ID<th>AMOUNT<th>CUSTOMER NAME");
 			while (rs.next()) {
 
 				int orderId = rs.getInt("ORDER_ID");
 				float amount = rs.getFloat("AMOUNT");
 				String customerName = rs.getString("CUSTOMER_NAME");
 
-				pw.printf(" Order ID=%s, amount=%s customerName=%s <br> ", orderId, amount, customerName);
+				pw.printf("<tr> <td> %s <td> %s <td> %s", orderId, amount, customerName);
 			}
+			pw.write("</table>");
 
 		} catch (SQLException e) {
 			e.printStackTrace();
