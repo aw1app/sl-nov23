@@ -29,4 +29,14 @@
     <servlet-name>JDBCInsertDemo</servlet-name>
     <url-pattern>/insert-demo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PreparedStatementInsertDemo</display-name>
+    <servlet-name>PreparedStatementInsertDemo</servlet-name>
+    <servlet-class>com.simpli.PreparedStatementInsertDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PreparedStatementInsertDemo</servlet-name>
+    <url-pattern>/prepared-statement-insert-demo</url-pattern>
+  </servlet-mapping>
 </web-app>
