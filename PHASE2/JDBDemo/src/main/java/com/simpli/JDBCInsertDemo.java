@@ -53,9 +53,9 @@ public class JDBCInsertDemo extends HttpServlet {
 			
 			pw.printf("<b> %s </b> inserted succesfully",count);			
 			
-		} catch (SQLException e) {
-			
+		} catch (SQLException e) {			
 			e.printStackTrace();
+			pw.printf("Inserted Failed!!");
 		}
 		
 		pw.close();

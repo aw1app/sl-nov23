@@ -39,4 +39,14 @@
     <servlet-name>PreparedStatementInsertDemo</servlet-name>
     <url-pattern>/prepared-statement-insert-demo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CallableStatementInsertDemo</display-name>
+    <servlet-name>CallableStatementInsertDemo</servlet-name>
+    <servlet-class>com.simpli.CallableStatementInsertDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CallableStatementInsertDemo</servlet-name>
+    <url-pattern>/callable-statement-insert-demo</url-pattern>
+  </servlet-mapping>
 </web-app>
