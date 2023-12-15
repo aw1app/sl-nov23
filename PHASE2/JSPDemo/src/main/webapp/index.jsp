@@ -5,6 +5,8 @@
 
 <div style="text-align: right;">
 
+    <a href="myday.jsp"> Import external class Demo</a> &nbsp;&nbsp; 
 	<a href="hello-world.jsp">Hello World</a> &nbsp;&nbsp; 
+	
 
 </div>
