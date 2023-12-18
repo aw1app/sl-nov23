@@ -9,7 +9,10 @@
     <sql:setDataSource var="ecommerce" driver="com.mysql.cj.jdbc.Driver"
 		url="jdbc:mysql://localhost:3306/ecommerce" user="root" password="rootroot" />
 		
-	<sql:query dataSource="${ecommerce}" sql="SELECT * FROM orders" var="result" />
+	<sql:query dataSource="${ecommerce}" var="result" >
+	SELECT * FROM orders
+	</sql:query>
+	
 	
 	<br><br>Orders Table data:
 	<br>
