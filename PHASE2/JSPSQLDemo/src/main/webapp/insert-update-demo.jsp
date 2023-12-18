@@ -6,7 +6,7 @@
     <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>   
     
     NOTE: Call this JSP like this http://localhost:8080/JSPSQLDemo/insert-update-demo.jsp?customer=Mohana&amount=25
-    ot write a html form to pass the customer name
+    ot write a html form to pass the customer name and amount
     
     <sql:setDataSource var="ecommerce" driver="com.mysql.cj.jdbc.Driver"
 		url="jdbc:mysql://localhost:3306/ecommerce" user="root" password="rootroot" />
@@ -17,7 +17,7 @@
 	INSERT INTO orders(amount,customer_name) values(<%=request.getParameter("amount") %>,'<%=request.getParameter("customer") %>')
 	</sql:update>
 	
-	Inserted <c:out value="${count }"></c:out> rows
+	<br><br>Inserted <c:out value="${count }"></c:out> rows
 	
 		
     
