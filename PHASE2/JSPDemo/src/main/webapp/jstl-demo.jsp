@@ -27,7 +27,7 @@ x is greater than or equal to 10
 	<br> Hello World <c:out value="${i}" />
 </c:forEach>
 
-<br><br><br><br> format jstl tag demo
+<br><br><br><br> Jstl Format  tag demo
 <c:set var="now" value="<%=new java.util.Date()%>" />
 <br>Raw Date: </b> <c:out value="${now}" /></b>
 <br>Formatted Date: <b><fmt:formatDate pattern="yyyy-MM-dd hh:mm:ss" value="${now}" /></b>
