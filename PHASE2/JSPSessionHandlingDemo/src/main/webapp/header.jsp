@@ -20,4 +20,8 @@
 	
 	&nbsp;| &nbsp;
 	
+	<a href="logout.jsp">LOG OUT</a>
+	
+	&nbsp;| &nbsp;
+	
 	</div>
