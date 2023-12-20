@@ -15,14 +15,7 @@ for(EProduct p: products) {
 			 ", Price: " + String.valueOf(p.getPrice()) +
 			 ", Date Added: " + p.getDateAdded().toString() + "<br>");
 	 
-	//Component Details
-	out.println("Component Details: " + "<br>");
-	ProductParts parts = p.getParts();
-	
-	out.println("HDD: " + parts.getHdd() + "<br>");
-	out.println("CPU: " + parts.getCpu()+ "<br>");
-	out.println("RAM: " + parts.getRam() + "<br>");
-	
+		
 };	
 
 hibSession.close();

@@ -27,9 +27,7 @@ public class EProduct {
 	 @Column(name="date_added")
      private Date dateAdded;
      
-     //component mapping
-     ProductParts parts;     
-     
+       
      
      public EProduct() {
     	 
@@ -75,19 +73,6 @@ public class EProduct {
 		this.dateAdded = dateAdded;
 	}
 
-
-	public ProductParts getParts() {
-		return parts;
-	}
-
-
-	public void setParts(ProductParts parts) {
-		this.parts = parts;
-	}
-     
-     
-
-	
-     
+    
 
 }
