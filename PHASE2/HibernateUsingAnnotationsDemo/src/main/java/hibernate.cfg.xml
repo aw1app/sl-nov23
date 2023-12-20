@@ -12,7 +12,7 @@
     
   
     
-    <mapping resource="com/simpli/Eproduct.hbm.xml" />
+    <mapping class="com.simpli.EProduct" />
     
     
     

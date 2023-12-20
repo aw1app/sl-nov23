@@ -3,10 +3,28 @@ package com.simpli;
 import java.math.BigDecimal;
 import java.util.*;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="eproduct")
 public class EProduct {
+	 
+	 @Id
+	 @GeneratedValue 
+	 @Column(name="ID")
 	 private long ID;
+	 
+	 @Column(name="name")
      private String name;
+	 
+	 @Column(name="price")
      private BigDecimal price;
+	 
+	 @Column(name="date_added")
      private Date dateAdded;
      
      //component mapping
