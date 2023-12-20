@@ -3,7 +3,8 @@ package com.simpli;
 public class Color {
 	private long COLORID;
 	private String name;
-
+	
+	
 	public Color() {
 
 	}

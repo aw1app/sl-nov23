@@ -15,11 +15,13 @@ for(com.simpli.EProduct p: products) {
 			 ", Price: " + String.valueOf(p.getPrice()) +
 			 ", Date Added: " + p.getDateAdded().toString() + "<br>");
 	 
-	 
-	List<com.simpli.Color> colors = p.getColors();
-	for(com.simpli.Color c : colors) {
-		out.println("Available in colors " + c.getName() + "<br>");
-	}
+	//Component Details
+	out.println("Component Details: " + "<br>");
+	ProductParts parts = p.getParts();
+	
+	out.println("HDD: " + parts.getHdd() + "<br>");
+	out.println("CPU: " + parts.getCpu()+ "<br>");
+	out.println("RAM: " + parts.getRam() + "<br>");
 	
 };	
 

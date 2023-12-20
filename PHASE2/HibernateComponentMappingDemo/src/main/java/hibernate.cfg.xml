@@ -14,10 +14,7 @@
     
     <mapping resource="com/simpli/Eproduct.hbm.xml" />
     
-    <mapping resource="com/simpli/Color.hbm.xml" />
-    <mapping resource="com/simpli/OS.hbm.xml" />
-    <mapping resource="com/simpli/Finance.hbm.xml" />
-    <mapping resource="com/simpli/ScreenSize.hbm.xml" />
+    
     
   </session-factory>
 </hibernate-configuration>
