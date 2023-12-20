@@ -5,6 +5,8 @@ public class Order {
 	int orderId;
 	float amount;
 	String customerName;
+	
+	Car c;
 
 	public int getOrderId() {
 		return orderId;
