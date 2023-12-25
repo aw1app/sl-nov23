@@ -24,7 +24,7 @@ public class EProductController {
 		
 		List<EProduct>  listOfProducts = eProductDAO.getProducts();
 		
-		model.addAttribute("listOfProducts" , listOfProducts);
+		model.addAttribute("prodlist" , listOfProducts);
 		
 		return "list-of-products"; // go to list-of-products.jsp
 		
