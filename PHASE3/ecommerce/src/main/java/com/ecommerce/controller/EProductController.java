@@ -19,7 +19,7 @@ public class EProductController {
 	
 	// Example http://localhost:8080/ecommerce/listProducts
 		
-	@RequestMapping(path ="/listProducts", method= RequestMethod.GET)
+	@RequestMapping(value ="/listProducts", method= RequestMethod.GET)
 	public String listProducts(ModelMap model) {
 		
 		List<EProduct>  listOfProducts = eProductDAO.getProducts();
