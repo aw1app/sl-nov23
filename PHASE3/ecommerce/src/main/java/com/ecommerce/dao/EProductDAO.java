@@ -2,6 +2,7 @@ package com.ecommerce.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -24,6 +25,11 @@ public class EProductDAO {
 
 		return template.query("select * from eproduct", new EProductRowMapper());
 
+	}
+	
+	// Add a new Product 
+	public void addProduct(String name, float price) {
+		template.update("insert into eproduct(name,price) values(?,?)",  new Object[] {name,price});
 	}
 
 }
