@@ -33,7 +33,7 @@ public class EProductController {
 	
 	
 	@RequestMapping(value ="/addProduct", method= RequestMethod.POST)
-	public String listProducts(@RequestParam String name, @RequestParam float price) {
+	public String addProduct(@RequestParam String name, @RequestParam float price) {
 		
 		eProductDAO.addProduct(name, price);
 		
@@ -42,13 +42,15 @@ public class EProductController {
 	}
 	
 	@RequestMapping(value ="/deleteProduct", method= RequestMethod.POST)
-	public String listProducts(@RequestParam long id) {
+	public String deleteProduct(@RequestParam long id) {
 		
 		eProductDAO.deleteProduct(id);
 		
 		return "delete-product-success"; // go to delete-product-success.jsp
 		
 	}
+	
+	
 	
 
 }

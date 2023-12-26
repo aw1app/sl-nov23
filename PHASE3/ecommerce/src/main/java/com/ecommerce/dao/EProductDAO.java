@@ -5,18 +5,19 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.ecommerce.EProduct;
 
 public class EProductDAO {
-
+	@Autowired
 	JdbcTemplate template;
 
-	public void setTemplate(JdbcTemplate template) {
-		this.template = template;
-	}
+//	public void setTemplate(JdbcTemplate template) {
+//		this.template = template;
+//	}
 
 	// Business methods
 

@@ -5,7 +5,7 @@
 
 <form action="deleteProduct" method="POST">
 
-	NAME: <input name="id"><br>
+	ID: <input name="id"><br>
 
 	<input type=submit>
 
