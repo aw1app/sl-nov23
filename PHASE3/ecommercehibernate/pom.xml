@@ -6,7 +6,7 @@
 
   <groupId>ecommercehibernate</groupId>
   <artifactId>ecommercehibernate</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-beta</version>
   <packaging>war</packaging>
 
   <name>com.simpli Maven Webapp</name>
@@ -140,7 +140,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>ecommerce</finalName>
+		<finalName>ecommerce-${version}</finalName>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
 			defaults (may be moved to parent pom) -->
 			<plugins>
