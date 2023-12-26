@@ -41,5 +41,14 @@ public class EProductController {
 		
 	}
 	
+	@RequestMapping(value ="/deleteProduct", method= RequestMethod.POST)
+	public String listProducts(@RequestParam long id) {
+		
+		eProductDAO.deleteProduct(id);
+		
+		return "delete-product-success"; // go to delete-product-success.jsp
+		
+	}
+	
 
 }

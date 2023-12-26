@@ -22,9 +22,7 @@ public class EProductDAO {
 
 	// 1. Fetch product objects from the DB
 	public List<EProduct> getProducts() {
-
 		return template.query("select * from eproduct", new EProductRowMapper());
-
 	}
 
 	// 2. Add a new Product
@@ -34,7 +32,7 @@ public class EProductDAO {
 
 	// 3. Delete Product
 	public void deleteProduct(long id) {
-		template.update("......", new Object[] { });
+		template.update("DELETE FROM eproduct WHERE id = ?", new Object[] {id});
 	}
 
 }
