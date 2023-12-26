@@ -26,16 +26,18 @@ public class EProductDAO {
 		return template.query("select * from eproduct", new EProductRowMapper());
 
 	}
-	
-	// Add a new Product 
+
+	// 2. Add a new Product
 	public void addProduct(String name, float price) {
-		template.update("insert into eproduct(name,price) values(?,?)",  new Object[] {name,price});
+		template.update("insert into eproduct(name,price) values(?,?)", new Object[] { name, price });
+	}
+
+	// 3. Delete Product
+	public void deleteProduct(long id) {
+		template.update("insert into eproduct(name,price) values(?,?)", new Object[] { });
 	}
 
 }
-
-
-	
 
 class EProductRowMapper implements RowMapper<EProduct> {
 	@Override
