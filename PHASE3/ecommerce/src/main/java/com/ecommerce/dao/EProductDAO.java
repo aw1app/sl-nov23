@@ -34,7 +34,7 @@ public class EProductDAO {
 
 	// 3. Delete Product
 	public void deleteProduct(long id) {
-		template.update("insert into eproduct(name,price) values(?,?)", new Object[] { });
+		template.update("......", new Object[] { });
 	}
 
 }
