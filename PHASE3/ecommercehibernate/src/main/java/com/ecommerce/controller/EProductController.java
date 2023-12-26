@@ -15,11 +15,11 @@ import com.ecommerce.entity.EProductEntity;
 public class EProductController {
 
 	@Autowired
-	private EProductDAO eproductDAO;
+	private EProductDAO eProductDAO;
 
 	@RequestMapping(value = "/listProducts", method = RequestMethod.GET)
 	public String listProducts(ModelMap model) {
-		List<EProductEntity> productList = eproductDAO.getAllProducts();
+		List<EProductEntity> productList = eProductDAO.getAllProducts();
 
 		model.addAttribute("prodlist", productList);
 
