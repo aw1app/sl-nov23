@@ -1,0 +1,7 @@
+Add the JSP support dependecncy in pom.xml
+Update application.propertoes ( jsp support, server port)
+copy entire webapp folder 
+
+
+additonal stuff
+

@@ -23,8 +23,7 @@ public class ProductController {
 	@PostMapping("/add-product")
 	public String addProduct(@ModelAttribute("product") EProduct product) {
 
-		return "new-product-added-success"; // go to new-product-added-success.jsp
-		
+		return "new-product-added-success"; // go to new-product-added-success.jsp		
 	}
 
 }
