@@ -1,16 +1,14 @@
 package com.ecommerce;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
 	
 	
-	@RequestMapping(value="/home", method=RequestMethod.GET)	
+	@GetMapping("/home")	
 	@ResponseBody
 	public String home() {	
 		
@@ -19,6 +17,10 @@ public class HomeController {
 		 //return "home"; // go to home.jsp
 	}
 	
-	
+	@GetMapping("/home1")
+	public String home1() {			
+		
+		 return "home"; // go to home.jsp
+	}
 
 }
