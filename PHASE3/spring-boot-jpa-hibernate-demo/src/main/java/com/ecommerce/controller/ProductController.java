@@ -1,5 +1,8 @@
 package com.ecommerce.controller;
 
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,10 +32,20 @@ public class ProductController {
 
 	@PostMapping("/add-product")
 	public String addProduct(@ModelAttribute("product") EProduct product) {
+		product.setDateAdded(new Date());
 
 		eProductRepositry.save(product);
 		
 		return "new-product-added-success"; // go to new-product-added-success.jsp		
+	}
+	
+	@GetMapping("/list-products")
+	public String listProduct(Model model) {
+		List<EProduct> products = eProductRepositry.findAll();
+		
+		model.addAttribute("prodlist", products);
+
+		return "list-of-products"; // go to product-list.jsp
 	}
 
 }
