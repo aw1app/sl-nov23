@@ -41,6 +41,7 @@ public class ProductController {
 		return "new-product-added-success"; // go to new-product-added-success.jsp		
 	}
 	
+	// LIST ALL PRODUCTS
 	@GetMapping("/list-products")
 	public String listProduct(Model model) {
 		List<EProduct> products = eProductRepositry.findAll();
@@ -50,7 +51,8 @@ public class ProductController {
 		return "list-of-products"; // go to product-list.jsp
 	}
 	
-			
+	
+	// DELETE A PRODUCT
 	@GetMapping("/delete-product")
 	public String listProduct(@RequestParam long id, Model model) {
 		 Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
