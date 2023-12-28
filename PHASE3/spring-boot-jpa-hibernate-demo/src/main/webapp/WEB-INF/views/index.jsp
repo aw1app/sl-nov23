@@ -8,3 +8,11 @@ Delete a product:<br>
 <input name="id">
 <input type=submit value="Delete">
 </form>
+
+
+<br><br>
+Edit a product:<br>
+<form action="edit-product" method="GET">
+<input name="id">
+<input type=submit value="Edit">
+</form>

@@ -68,8 +68,7 @@ public class ProductController {
 	}
 	
 	
-	// EDIT A PRODUCT
-	// SHOW THE FORM
+	// EDIT A PRODUCT:  SHOW THE FORM
 	@GetMapping("/edit-product")
 	public String editProduct(@RequestParam long id, Model model) {
 		Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
