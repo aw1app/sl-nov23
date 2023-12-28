@@ -11,6 +11,7 @@
 		<th>NAME
 		<th>PRICE
 		<th>DATE ADDED
+		<th>EDIT
 		<th>DELETE
 	</tr>
 
@@ -20,6 +21,7 @@
 			<td>${product.name}
 			<td>${product.price}
 			<td>${product.dateAdded}
+			<td><a href="edit-product?id=${product.ID}" > EDIT </a>	
 			<td><a href="delete-product?id=${product.ID}" > DELETE </a>			
 		</tr>
 </c:forEach>
