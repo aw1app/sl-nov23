@@ -54,13 +54,13 @@ public class ProductController {
 	@GetMapping("/delete-product")
 	public String listProduct(@RequestParam long id, Model model) {
 		 Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
+		 model.addAttribute("id", id);
 		
 		 if ( prodFromRepo.isPresent() ) {
 			 eProductRepositry.deleteById(id);
 		 }else {
 			 return "delete-product-failed"; // go to delete-product-failed.jsp
-		 }
-		
+		 };		
 
 		return "delete-product-success"; // go to delete-product-success.jsp
 	}

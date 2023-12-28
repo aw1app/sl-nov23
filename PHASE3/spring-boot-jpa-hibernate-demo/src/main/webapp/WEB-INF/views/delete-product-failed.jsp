@@ -1,1 +1,1 @@
-Delete product Failed!
+Delete product with id=${id} Failed!

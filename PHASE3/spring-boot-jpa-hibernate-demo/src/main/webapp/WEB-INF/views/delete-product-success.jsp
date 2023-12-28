@@ -1,1 +1,1 @@
-Delete product Success!
+Delete product with id=${id} Success!
