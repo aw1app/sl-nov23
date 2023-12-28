@@ -71,7 +71,6 @@ public class ProductController {
 	// EDIT A PRODUCT:  SHOW THE FORM
 	@GetMapping("/edit-product")
 	public String editProduct(@RequestParam long id, Model model) {
-		System.out.println("Hi 1");
 		Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
 		model.addAttribute("id", id);
 		

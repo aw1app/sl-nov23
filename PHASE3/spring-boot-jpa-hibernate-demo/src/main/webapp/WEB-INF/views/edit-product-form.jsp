@@ -7,10 +7,10 @@
 	<form:form action="edit-product" method="post" modelAttribute="prod">
 
 		<form:label path="name" >Product name:</form:label>
-		<form:input path="name" value=${prod.name} />
+		<form:input path="name" value="${prod.name}" />
 		<br />
 		<form:label path="price">Product Price:</form:label>
-		<form:input path="price" value=${prod.price}/>
+		<form:input path="price" value="${prod.price}"/>
 		<br />
 
 		<form:button>Edit and Save</form:button>
