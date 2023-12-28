@@ -3,8 +3,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <div align="center">
+    Edit Product (id=${prod.ID}):<br>
 
-	<form:form action="edit-product" method="post" modelAttribute="prod">
+	<form:form action="edit-product" method="POST" modelAttribute="prod">
+		<form:input path="ID" value="${prod.ID}" hidden="true"/>
 
 		<form:label path="name" >Product name:</form:label>
 		<form:input path="name" value="${prod.name}" />

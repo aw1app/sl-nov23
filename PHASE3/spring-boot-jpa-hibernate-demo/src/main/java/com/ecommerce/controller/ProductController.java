@@ -17,7 +17,7 @@ import com.ecommerce.repositry.EProductRepositry;
 
 @Controller
 public class ProductController {
-	
+
 	@Autowired
 	EProductRepositry eProductRepositry;
 
@@ -29,62 +29,66 @@ public class ProductController {
 
 		return "new-product"; // go to new-product.jsp
 	}
-	
-	
 
 	@PostMapping("/add-product")
 	public String addProduct(@ModelAttribute("product") EProduct product) {
 		product.setDateAdded(new Date());
 
 		eProductRepositry.save(product);
-		
-		return "new-product-added-success"; // go to new-product-added-success.jsp		
+
+		return "new-product-added-success"; // go to new-product-added-success.jsp
 	}
-	
+
 	// LIST ALL PRODUCTS
 	@GetMapping("/list-products")
 	public String listProduct(Model model) {
 		List<EProduct> products = eProductRepositry.findAll();
-		
+
 		model.addAttribute("prodlist", products);
 
 		return "list-of-products"; // go to product-list.jsp
 	}
-	
-	
+
 	// DELETE A PRODUCT
 	@GetMapping("/delete-product")
 	public String deleteProduct(@RequestParam long id, Model model) {
-		 Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
-		 model.addAttribute("id", id);
-		
-		 if ( prodFromRepo.isPresent() ) {
-			 eProductRepositry.deleteById(id);
-		 }else {
-			 return "delete-product-failed"; // go to delete-product-failed.jsp
-		 };		
+		Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
+		model.addAttribute("id", id);
+
+		if (prodFromRepo.isPresent()) {
+			eProductRepositry.deleteById(id);
+		} else {
+			return "delete-product-failed"; // go to delete-product-failed.jsp
+		}
+		;
 
 		return "delete-product-success"; // go to delete-product-success.jsp
 	}
-	
-	
-	// EDIT A PRODUCT:  SHOW THE FORM
+
+	// EDIT A PRODUCT: SHOW THE FORM
 	@GetMapping("/edit-product")
-	public String editProduct(@RequestParam long id, Model model) {
+	public String showEditProductForm(@RequestParam long id, Model model) {
 		Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
 		model.addAttribute("id", id);
-		
-		 if ( prodFromRepo.isPresent() ) {
-			 EProduct product = prodFromRepo.get();
-			 model.addAttribute("prod", product);
-			 // Show the Edit Form
-			 return "edit-product-form";
-		 }else {
-			 return "product-not-found";// product-not-found.jsp
-		 }	
-		
+
+		if (prodFromRepo.isPresent()) {
+			EProduct product = prodFromRepo.get();
+			model.addAttribute("prod", product);
+			// Show the Edit Form
+			return "edit-product-form";
+		} else {
+			return "product-not-found";// product-not-found.jsp
+		}
+
 	}
-	
-	
+
+	// EDIT A PRODUCT: SAVE THE EDITED PRODUCT
+	@PostMapping("/edit-product")
+	public String saveEditedProduct(@ModelAttribute("prod") EProduct product) {
+		product.setDateAdded(new Date());
+		eProductRepositry.save(product);
+		
+		return "edit-product-success"; // go to edit-product-success.jsp
+	}
 
 }
