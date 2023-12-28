@@ -24,5 +24,8 @@ public interface EProductRepositry extends JpaRepository<EProduct, Long>{
 	List<EProduct> findAllByPriceGreaterThan(float price);
 	
 	List<EProduct> findAllByPriceGreaterThanAndPriceLessThan(float price1, float price2);
+	
+	//Ordering
+	List<EProduct> findAllByPriceGreaterThanOrderByPrice(float price);
 
 }

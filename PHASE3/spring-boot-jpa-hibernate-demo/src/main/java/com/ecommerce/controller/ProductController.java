@@ -5,14 +5,18 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ecommerce.entity.EProduct;
+import com.ecommerce.exception.NoProductsWithSuchNameException;
 import com.ecommerce.repositry.EProductRepositry;
 
 @Controller
@@ -114,12 +118,29 @@ public class ProductController {
 	
 	//6.
 	@GetMapping("/list-products-by-name-like")
-	public String listProductByNameLike(@RequestParam String name, Model model) {
+	public String listProductByNameLike(@RequestParam String name, Model model) throws NoProductsWithSuchNameException {
+		if(name.length()<=1)
+			throw new ProductSearchException("Type atleast 3 chars to search");
+			
 		List<EProduct> products = eProductRepositry.findAllByNameContaining(name);
+		
+//		if(products.size()==0)
+//			throw new ProductSearchException("List is empty");
 
 		model.addAttribute("prodlist", products);
 
 		return "list-of-products"; // go to list-of-products.jsp
+	}
+	
+	// Exception Handling
+	@ExceptionHandler
+	public ResponseEntity<Object> abc(Exception ex){
+		return new ResponseEntity<>("Sorry, something went wrong. Contact CC.", HttpStatus.BAD_REQUEST);
+	}
+	
+	@ExceptionHandler
+	public ResponseEntity<Object> abc1(NoProductsWithSuchNameException ex){
+		return new ResponseEntity<>("Sorry,"+ex.getMessage(), HttpStatus.NOT_FOUND);
 	}
 
 }
