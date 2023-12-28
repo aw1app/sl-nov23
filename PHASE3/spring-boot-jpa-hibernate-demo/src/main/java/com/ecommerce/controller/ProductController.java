@@ -54,7 +54,7 @@ public class ProductController {
 	
 	// DELETE A PRODUCT
 	@GetMapping("/delete-product")
-	public String listProduct(@RequestParam long id, Model model) {
+	public String deleteProduct(@RequestParam long id, Model model) {
 		 Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
 		 model.addAttribute("id", id);
 		
@@ -65,6 +65,25 @@ public class ProductController {
 		 };		
 
 		return "delete-product-success"; // go to delete-product-success.jsp
+	}
+	
+	
+	// EDIT A PRODUCT
+	// SHOW THE FORM
+	@GetMapping("/edit-product")
+	public String editProduct(@RequestParam long id, Model model) {
+		Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
+		model.addAttribute("id", id);
+		
+		 if ( prodFromRepo.isPresent() ) {
+			 EProduct product = prodFromRepo.get();
+			 model.addAttribute("prod", product);
+			 // Show the Edit Form
+			 return "edit-product-form";
+		 }else {
+			 return "product-not-found";// product-not-found.jsp
+		 }	
+		
 	}
 	
 	
