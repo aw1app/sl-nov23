@@ -90,5 +90,17 @@ public class ProductController {
 		
 		return "edit-product-success"; // go to edit-product-success.jsp
 	}
+	
+	
+	// Advanced CRUD operations
+	// 5. LIST ALL PRODUCTS that has a particular name
+		@GetMapping("/list-products-by-name")
+		public String listProductByName(@RequestParam String name,Model model) {
+			List<EProduct> products = eProductRepositry.findAllByName(name);
+
+			model.addAttribute("prodlist", products);
+
+			return "list-of-products"; // go to list-of-products.jsp
+		}
 
 }

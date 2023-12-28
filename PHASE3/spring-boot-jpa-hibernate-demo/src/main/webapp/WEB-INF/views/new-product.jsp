@@ -16,3 +16,6 @@
 		<form:button>Add Product</form:button>
 
 	</form:form>
+	
+<br><br>
+<a href="/" > Back to HOME</a>
