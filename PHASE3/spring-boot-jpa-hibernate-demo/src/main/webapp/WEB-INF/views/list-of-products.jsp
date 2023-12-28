@@ -27,7 +27,8 @@
 </c:forEach>
 
 </table>
+<br><br>
+<a href="add-product" >Add New product</a> 
 
-</td>
-<br>
+<br><br>
 <a href="/" > Back to HOME</a>
