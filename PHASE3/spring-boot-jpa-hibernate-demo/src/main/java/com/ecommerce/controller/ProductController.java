@@ -87,20 +87,29 @@ public class ProductController {
 	public String saveEditedProduct(@ModelAttribute("prod") EProduct product) {
 		product.setDateAdded(new Date());
 		eProductRepositry.save(product);
-		
+
 		return "edit-product-success"; // go to edit-product-success.jsp
 	}
-	
-	
+
 	// Advanced CRUD operations
-	// 5. LIST ALL PRODUCTS that has a particular name
-		@GetMapping("/list-products-by-name")
-		public String listProductByName(@RequestParam String name,Model model) {
-			List<EProduct> products = eProductRepositry.findAllByName(name);
+	// 5a. LIST ALL PRODUCTS that has a particular name
+	@GetMapping("/list-products-by-name")
+	public String listProductByName(@RequestParam String name, Model model) {
+		List<EProduct> products = eProductRepositry.findAllByName(name);
 
-			model.addAttribute("prodlist", products);
+		model.addAttribute("prodlist", products);
 
-			return "list-of-products"; // go to list-of-products.jsp
-		}
+		return "list-of-products"; // go to list-of-products.jsp
+	}
+
+	// 5b. LIST ALL PRODUCTS that has a particular price
+	@GetMapping("/list-products-by-price")
+	public String listProductByPrice(@RequestParam float price, Model model) {
+		List<EProduct> products = eProductRepositry.findAllByPrice(price);
+
+		model.addAttribute("prodlist", products);
+
+		return "list-of-products"; // go to list-of-products.jsp
+	}
 
 }

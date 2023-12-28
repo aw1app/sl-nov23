@@ -24,3 +24,10 @@ Search products by Name:<br>
 <input name="name">
 <input type=submit value="SEARCH">
 </form>
+
+<br><br>
+Search products by Price:<br>
+<form action="list-products-by-price" method="GET">
+<input name="price">
+<input type=submit value="SEARCH">
+</form>
