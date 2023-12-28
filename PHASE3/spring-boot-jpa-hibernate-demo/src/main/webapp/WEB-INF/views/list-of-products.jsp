@@ -3,6 +3,8 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<td align="center">
+<p> List of Products </p> 
 <table border=1>
 	<tr>
 		<th>ID
@@ -23,3 +25,5 @@
 </c:forEach>
 
 </table>
+
+</td>
