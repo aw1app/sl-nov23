@@ -2,6 +2,7 @@ package com.ecommerce.controller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ecommerce.entity.EProduct;
 import com.ecommerce.repositry.EProductRepositry;
@@ -47,5 +49,22 @@ public class ProductController {
 
 		return "list-of-products"; // go to product-list.jsp
 	}
+	
+			
+	@GetMapping("/delete-product")
+	public String listProduct(@RequestParam long id, Model model) {
+		 Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
+		
+		 if ( prodFromRepo.isPresent() ) {
+			 eProductRepositry.deleteById(id);
+		 }else {
+			 return "delete-product-failed"; // go to delete-product-failed.jsp
+		 }
+		
+
+		return "delete-product-success"; // go to delete-product-success.jsp
+	}
+	
+	
 
 }
