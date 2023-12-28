@@ -111,5 +111,15 @@ public class ProductController {
 
 		return "list-of-products"; // go to list-of-products.jsp
 	}
+	
+	//6.
+	@GetMapping("/list-products-by-name-like")
+	public String listProductByNameLike(@RequestParam String name, Model model) {
+		List<EProduct> products = eProductRepositry.findAllByNameContaining(name);
+
+		model.addAttribute("prodlist", products);
+
+		return "list-of-products"; // go to list-of-products.jsp
+	}
 
 }

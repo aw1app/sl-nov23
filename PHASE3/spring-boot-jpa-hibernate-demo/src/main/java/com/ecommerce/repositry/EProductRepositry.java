@@ -13,8 +13,16 @@ public interface EProductRepositry extends JpaRepository<EProduct, Long>{
 	// Spring only wants to mention those CRUD methods
 	// that are not based on ID
 	
-	List<EProduct> findAllByName(String name);
+	List<EProduct> findAllByName(String name);	
 	
 	List<EProduct> findAllByPrice(float price);
+	
+	//search by name like
+	List<EProduct> findAllByNameContaining(String name);
+	
+	//
+	List<EProduct> findAllByPriceGreaterThan(float price);
+	
+	List<EProduct> findAllByPriceGreaterThanAndPriceLessThan(float price1, float price2);
 
 }

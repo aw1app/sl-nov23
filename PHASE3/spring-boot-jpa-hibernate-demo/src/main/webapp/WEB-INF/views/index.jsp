@@ -19,8 +19,15 @@ Edit a product:<br>
 
 
 <br><br>
-Search products by Name:<br>
+Search products by exact Name:<br>
 <form action="list-products-by-name" method="GET">
+<input name="name">
+<input type=submit value="SEARCH">
+</form>
+
+<br><br>
+Search products by Name Like:<br>
+<form action="list-products-by-name-like" method="GET">
 <input name="name">
 <input type=submit value="SEARCH">
 </form>
