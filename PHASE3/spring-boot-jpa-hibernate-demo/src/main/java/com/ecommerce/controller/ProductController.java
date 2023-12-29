@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ecommerce.entity.EProduct;
 import com.ecommerce.exception.NoProductsWithSuchNameException;
+import com.ecommerce.exception.ProductSearchException;
 import com.ecommerce.repositry.EProductRepositry;
 
 @Controller
@@ -139,7 +140,7 @@ public class ProductController {
 	}
 	
 	@ExceptionHandler
-	public ResponseEntity<Object> abc1(NoProductsWithSuchNameException ex){
+	public ResponseEntity<Object> abc1(ProductSearchException ex){
 		return new ResponseEntity<>("Sorry,"+ex.getMessage(), HttpStatus.NOT_FOUND);
 	}
 

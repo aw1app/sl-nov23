@@ -10,7 +10,6 @@ public class MyThread1 extends Thread{
 	}
 	
 	
-	@Override
 	public void run_sleep() {
 		int counter=0;
 		
