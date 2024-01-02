@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @EnableJpaRepositories
-@ComponentScan({"com.ecommerce.controller", "com.ecommerce.entity","com.ecommerce.repositry" })
+@ComponentScan({"com.ecommerce.controller", "com.ecommerce.entity","com.ecommerce.repositry", "com.ecommerce.exception"})
 @SpringBootApplication
 public class SpringBootJpaHibernateDemoApplication {
 

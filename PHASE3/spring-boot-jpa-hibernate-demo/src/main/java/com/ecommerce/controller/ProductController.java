@@ -119,7 +119,7 @@ public class ProductController {
 	
 	//6.
 	@GetMapping("/list-products-by-name-like")
-	public String listProductByNameLike(@RequestParam String name, Model model) throws NoProductsWithSuchNameException {
+	public String listProductByNameLike(@RequestParam String name, Model model) throws ProductSearchException {
 		if(name.length()<=1)
 			throw new ProductSearchException("Type atleast 3 chars to search");
 			
