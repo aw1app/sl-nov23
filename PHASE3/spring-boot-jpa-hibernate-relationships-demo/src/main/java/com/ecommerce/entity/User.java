@@ -12,8 +12,8 @@ import lombok.Setter;
 
 @Entity
 @Table(name="users")
-@Getter
-@Setter
+//@Getter
+//@Setter
 public class User {
 	
 	@Id
@@ -24,7 +24,32 @@ public class User {
 	private String name;
 	
 	@OneToOne
-	AadharCard aadharCard;	
+	AadharCard aadharCard;
+
+	public long getID() {
+		return ID;
+	}
+
+	public void setID(long iD) {
+		ID = iD;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public AadharCard getAadharCard() {
+		return aadharCard;
+	}
+
+	public void setAadharCard(AadharCard aadharCard) {
+		this.aadharCard = aadharCard;
+	}	
+	
 	
 	
 

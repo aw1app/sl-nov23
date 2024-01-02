@@ -11,8 +11,8 @@ import lombok.Setter;
 
 @Entity
 @Table(name="aadhar")
-@Getter
-@Setter
+//@Getter
+//@Setter
 public class AadharCard {
 	
 	@Id
@@ -21,6 +21,23 @@ public class AadharCard {
 	private long ID;
 	
 	private long number;
+
+	public long getID() {
+		return ID;
+	}
+
+	public void setID(long iD) {
+		ID = iD;
+	}
+
+	public long getNumber() {
+		return number;
+	}
+
+	public void setNumber(long number) {
+		this.number = number;
+	}
 	
 
+	
 }

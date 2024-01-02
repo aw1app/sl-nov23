@@ -23,15 +23,21 @@ public class UserController {
 	
 	@PostMapping("/add-user")
 	@ResponseBody
-	public String addUser(@RequestParam String uName, @RequestParam String aadharCardNo) {
+	public String addUser(@RequestParam String uName, @RequestParam long aadharCardNo) {
 		
 		User user = new User();
 		user.setName(uName);
 		
 		AadharCard aadharCard = new AadharCard();
-		aadharCard.se
+		aadharCard.setNumber(aadharCardNo);
 		
-		return "";
+		aadharCardRepositry.save(aadharCard);
+		
+		user.setAadharCard(aadharCard);
+		
+		userRepositry.save(user);
+		
+		return "User with id="+user.getID() + " is created. His aadhar card id="+aadharCard.getID();
 	}
 
 }
