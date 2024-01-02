@@ -10,3 +10,11 @@ Aadhar No: <input name="aadharCardNo">
 <input type=submit value="Add User">
 </form>
 
+
+<br><br>
+Display a user:<br>
+<form action="user-details" method="GET">
+User ID: <input name="id">
+<input type=submit value="Display User">
+</form>
+
