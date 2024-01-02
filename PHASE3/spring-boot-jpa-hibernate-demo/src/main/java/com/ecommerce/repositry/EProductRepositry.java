@@ -3,6 +3,7 @@ package com.ecommerce.repositry;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.ecommerce.entity.EProduct;
@@ -27,5 +28,12 @@ public interface EProductRepositry extends JpaRepository<EProduct, Long>{
 	
 	//Ordering
 	List<EProduct> findAllByPriceGreaterThanOrderByPrice(float price);
+	
+	//Our own JPQL queries
+	@Query("SELECT p FROM EProduct p WHERE p.price < :minPrice and p.price > :maxPrice")
+	List<EProduct> findAllWherePriceIsNotInBetween(float minPrice,float maxPrice);
+	
+	@Query("SELECT p FROM EProduct p WHERE p.name LIKE :name%")
+	List<EProduct> findAllWhereNameStartsWith(String name);
 
 }
