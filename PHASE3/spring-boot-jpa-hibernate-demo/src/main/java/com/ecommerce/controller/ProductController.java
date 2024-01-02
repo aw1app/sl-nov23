@@ -70,6 +70,23 @@ public class ProductController {
 		return "delete-product-success"; // go to delete-product-success.jsp
 	}
 
+	// DISPLAY A SINGLE PRODUCT
+	@GetMapping("/product-details")
+	public String showProductDetails(@RequestParam long id, Model model) {
+		Optional<EProduct> prodFromRepo = eProductRepositry.findById(id);
+		model.addAttribute("id", id);
+
+		if (prodFromRepo.isPresent()) {
+			EProduct product = prodFromRepo.get();
+			model.addAttribute("prod", product);
+		} else {
+			return "product-not-found"; // go to product-not-found.jsp
+		}
+		
+
+		return "product-details"; // go to product-details.jsp
+	}
+
 	// EDIT A PRODUCT: SHOW THE FORM
 	@GetMapping("/edit-product")
 	public String showEditProductForm(@RequestParam long id, Model model) {
@@ -116,15 +133,15 @@ public class ProductController {
 
 		return "list-of-products"; // go to list-of-products.jsp
 	}
-	
-	//6.
+
+	// 6.
 	@GetMapping("/list-products-by-name-like")
 	public String listProductByNameLike(@RequestParam String name, Model model) throws ProductSearchException {
-		if(name.length()<=1)
+		if (name.length() <= 1)
 			throw new ProductSearchException("Type atleast 3 chars to search");
-			
+
 		List<EProduct> products = eProductRepositry.findAllByNameContaining(name);
-		
+
 //		if(products.size()==0)
 //			throw new ProductSearchException("List is empty");
 
@@ -132,16 +149,16 @@ public class ProductController {
 
 		return "list-of-products"; // go to list-of-products.jsp
 	}
-	
+
 	// Exception Handling
 	@ExceptionHandler
-	public ResponseEntity<Object> abc(Exception ex){
+	public ResponseEntity<Object> abc(Exception ex) {
 		return new ResponseEntity<>("Sorry, something went wrong. Contact CC.", HttpStatus.BAD_REQUEST);
 	}
-	
+
 	@ExceptionHandler
-	public ResponseEntity<Object> abc1(ProductSearchException ex){
-		return new ResponseEntity<>("Sorry,"+ex.getMessage(), HttpStatus.NOT_FOUND);
+	public ResponseEntity<Object> abc1(ProductSearchException ex) {
+		return new ResponseEntity<>("Sorry," + ex.getMessage(), HttpStatus.NOT_FOUND);
 	}
 
 }

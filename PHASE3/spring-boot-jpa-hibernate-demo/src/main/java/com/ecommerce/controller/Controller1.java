@@ -18,5 +18,14 @@ public class Controller1 {
 					"Hello, with thanks. This is an exception message from Global Hand;er");
 		return "Hello";
 	}
+	
+	@GetMapping("/hello-2")
+	@ResponseBody
+	public String hello2(@RequestParam int number) throws NoProductsWithSuchNameException {
+		if (number == 5)
+			throw new NoProductsWithSuchNameException(
+					"Hello, with thanks. This is an exception message from Global Hand;er");
+		return "Hello";
+	}
 
 }
