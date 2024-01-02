@@ -4,7 +4,7 @@
 
 <br><br>
 Add  a user:<br>
-<form action="add-user" method="GET">
+<form action="add-user" method="POST">
 User Name: <input name="uName">
 Aadhar No: <input name="aadharCardNo">
 <input type=submit value="Add User">
