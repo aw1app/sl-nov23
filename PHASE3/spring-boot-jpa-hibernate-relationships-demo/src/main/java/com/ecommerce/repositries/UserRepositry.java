@@ -1,3 +1,5 @@
+package com.ecommerce.repositries;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ecommerce.entity.User;
