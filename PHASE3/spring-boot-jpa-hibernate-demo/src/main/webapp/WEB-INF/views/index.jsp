@@ -3,6 +3,13 @@
 <a href="list-products" >List products</a>
 
 <br><br>
+Display a product:<br>
+<form action="product-details" method="GET">
+<input name="id">
+<input type=submit value="Display">
+</form>
+
+<br><br>
 Delete a product:<br>
 <form action="delete-product" method="GET">
 <input name="id">

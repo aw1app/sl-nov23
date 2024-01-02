@@ -1,10 +1,10 @@
 Product Details Page
 
 <ul>
-<li> ${prod.ID}
-<li> ${prod.name}
-<li> ${prod.price}
-<li> ${prod.dateAdded}
+<li> ID:  ${prod.ID}
+<li> Name: ${prod.name}
+<li> Price : ${prod.price}
+<li> Date Added: ${prod.dateAdded}
 </ul>
 
 <br><br>
