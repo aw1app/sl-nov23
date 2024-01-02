@@ -29,7 +29,7 @@ public class UserController {
 		user.setName(uName);
 		
 		AadharCard aadharCard = new AadharCard();
-		aadharCard.set
+		aadharCard.se
 		
 		return "";
 	}
