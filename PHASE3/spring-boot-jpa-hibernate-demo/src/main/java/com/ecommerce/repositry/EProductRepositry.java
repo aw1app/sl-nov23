@@ -35,5 +35,9 @@ public interface EProductRepositry extends JpaRepository<EProduct, Long>{
 	
 	@Query("SELECT p FROM EProduct p WHERE p.name LIKE :name%")
 	List<EProduct> findAllWhereNameStartsWith(String name);
+	
+	// SQL queries
+	@Query(value="SELECT * FROM eproduct WHERE name LIKE %:name%", nativeQuery=true)
+	List<EProduct> findAllByHavingNameAnywhereUsingSQL(String name);
 
 }
