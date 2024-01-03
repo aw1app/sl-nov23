@@ -18,6 +18,8 @@ public class MobilePhone {
 	@Column(name = "id")
 	private long ID;
 
+	
+	//@Pattern(regexp = "\\d{10}")
 	private long number;
 	
 	private String provider;

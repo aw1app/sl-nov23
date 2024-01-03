@@ -37,7 +37,7 @@
 		</dependency>
 
 
-		<!-- Other dependencies -->
+		<!-- Entity Validation dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>

@@ -2,7 +2,24 @@
 &nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="list-products" >List products</a>
 
+
+<a href="add-user-with-degrees-simplified-show-form">Add User (Simplified, with Edu Degrees) Form</a>
+
 <a href="add-user-simplified-show-form">Add User (Simplified) Form</a>
+
+
+
+<br><br>
+Add  a user with Degrees:<br>
+<form action="add-user-with-degrees" method="POST">
+User Name: <input name="uName">
+Aadhar No: <input name="aadharCardNo">
+Mobile No 1: <input name="mobileNo1">
+Mobile No 2: <input name="mobileNo2">
+Edu Deg No 1: <input name="deg1">
+Edu Deg No 2: <input name="deg2">
+<input type=submit value="Add User">
+</form>
 
 
 <br><br>

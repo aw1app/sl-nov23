@@ -19,3 +19,9 @@ Mobiles:<br>
 <c:forEach var="mobile" items="${user.phones}">
 		<li>${mobile.number}
 </c:forEach>
+
+DEGREES:<br> 
+
+<c:forEach var="degree" items="${user.degrees}">
+		<li>${degree.name}
+</c:forEach>

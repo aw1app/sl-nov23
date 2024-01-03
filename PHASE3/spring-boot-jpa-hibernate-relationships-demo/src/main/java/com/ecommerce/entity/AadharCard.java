@@ -16,9 +16,9 @@ public class AadharCard {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
-	private long ID;
+	private long ID;	
 	
-	
+	//@Pattern(regexp = "\\d{12}")
 	private long number;
 
 	public long getID() {
