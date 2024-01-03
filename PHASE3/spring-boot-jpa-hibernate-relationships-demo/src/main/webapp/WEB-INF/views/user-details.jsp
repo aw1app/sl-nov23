@@ -8,6 +8,7 @@ User Details:
 <li>${user.ID}
 <li>${user.name} 
 
+Aadhar Details:
 
 <br><br> 
 
