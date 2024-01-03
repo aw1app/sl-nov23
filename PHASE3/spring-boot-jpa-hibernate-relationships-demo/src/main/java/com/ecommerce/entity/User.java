@@ -2,6 +2,7 @@ package com.ecommerce.entity;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,8 +29,7 @@ public class User {
 	@OneToOne
 	AadharCard aadharCard;
 	
-	@OneToMany
-	@JoinColumn
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)	
 	List<MobilePhone> phones;
 
 	public long getID() {
@@ -56,7 +56,13 @@ public class User {
 		this.aadharCard = aadharCard;
 	}	
 	
+	public void setPhones(List<MobilePhone> phones) {
+		this.phones = phones;
+	}
 	
+	public List<MobilePhone> getPhones() {
+		return phones;
+	}
 	
 
 }
