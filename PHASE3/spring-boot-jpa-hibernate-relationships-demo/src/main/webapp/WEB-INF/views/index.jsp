@@ -2,6 +2,19 @@
 &nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="list-products" >List products</a>
 
+<a href="add-user-simplified-show-form">Add User (Simplified) Form</a>
+
+
+<br><br>
+Add  a user:<br>
+<form action="add-user-simplified" method="POST">
+User Name: <input name="name">
+Aadhar No: <input name="aadharCard.number">
+Mobile No 1: <input name="phones[0].number">
+Mobile No 2: <input name="phones[1].number">
+<input type=submit value="Add User">
+</form>
+
 <br><br>
 Add  a user:<br>
 <form action="add-user-with-mobiles" method="POST">

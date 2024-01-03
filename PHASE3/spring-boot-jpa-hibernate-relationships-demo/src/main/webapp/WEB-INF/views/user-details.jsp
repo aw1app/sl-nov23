@@ -11,7 +11,7 @@ User Details:
 </center>
 
 Aadhar Details:
-
+${user.aadharCard.number}
 <br><br> 
 
 Mobiles:<br> 

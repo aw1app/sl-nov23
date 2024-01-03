@@ -26,7 +26,7 @@ public class User {
 	
 	private String name;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	AadharCard aadharCard;
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)	

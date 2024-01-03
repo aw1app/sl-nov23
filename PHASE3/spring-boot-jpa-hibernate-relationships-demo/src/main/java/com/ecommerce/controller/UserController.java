@@ -6,9 +6,12 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -83,22 +86,55 @@ public class UserController {
 
 		user.setPhones(mobiles);
 
-		//userRepositry.save(user);
+		// userRepositry.save(user);
 
 		return "User with id=" + user.getID() + " is created. His aadhar card id=" + aadharCard.getID();
 	}
 
-	@GetMapping("/user-details")	
-	public String userDetails(@RequestParam long id, ModelMap model ) {
+	@GetMapping("/add-user-simplified-show-form")
+	public String addUserWithMobiles(Model model) {
+		User user = new User();
+		model.addAttribute("user", user);
+
+		return "new-user";
+	}
+
+	@PostMapping("/add-user-simplified-save")
+	@ResponseBody
+	public String addUserWithMobiles(@ModelAttribute("user") User user) {
+
+		userRepositry.save(user);
+
+		List<MobilePhone> mobiles = user.getPhones();
+
+		for (MobilePhone m : mobiles) {
+			m.setUser(user);
+			mobilePhoneRepositry.save(m);
+		}
+
+		return "User " + user.getID() + " add success!";
+	}
+
+	// Try this when posting JSON content
+//	@PostMapping("/add-user-simplified")
+//	@ResponseBody
+//	public String addUserWithMobiles(@RequestBody User user) {
+//		userRepositry.save(user);
+//		
+//		return "User " +user.getID() +" add success!";
+//	}
+
+	@GetMapping("/user-details")
+	public String userDetails(@RequestParam long id, ModelMap model) {
 		Optional<User> userFromRepo = userRepositry.findById(id);
-		
-		model.addAttribute("id",id);
+
+		model.addAttribute("id", id);
 
 		if (userFromRepo.isPresent()) {
 			User user = userFromRepo.get();
-			
-			model.addAttribute("user",user);
-			
+
+			model.addAttribute("user", user);
+
 			AadharCard aadhar = user.getAadharCard();
 			List<MobilePhone> mobiles = user.getPhones();
 
@@ -106,7 +142,6 @@ public class UserController {
 			for (MobilePhone m : mobiles)
 				mobilesStr = mobilesStr + " " + m.getNumber();
 
-			
 			return "user-details";
 		} else {
 			return "user-not-found";
