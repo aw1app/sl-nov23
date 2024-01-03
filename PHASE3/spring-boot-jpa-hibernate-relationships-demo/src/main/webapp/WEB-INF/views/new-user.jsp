@@ -1,6 +1,6 @@
 <br><br>
 Add  a user:<br>
-<form action="add-user-simplified-save" method="POST">
+<form action="add-user-simplified-save" method="POST" >
 User Name: <input name="name">
 Aadhar No: <input name="aadharCard.number">
 Mobile No 1: <input name="phones[0].number">

@@ -18,6 +18,7 @@ public class AadharCard {
 	@Column(name="id")
 	private long ID;
 	
+	
 	private long number;
 
 	public long getID() {
