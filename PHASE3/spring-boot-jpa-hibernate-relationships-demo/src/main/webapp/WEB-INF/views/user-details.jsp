@@ -4,8 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
-User Details
-
+User Details:
 <li>${user.ID}
 <li>${user.name} 
 
@@ -14,6 +13,6 @@ User Details
 
 Mobiles:<br> 
 
-<c:forEach var="mobile" items="${user.mobiles}">
+<c:forEach var="mobile" items="${user.phones}">
 		<li>${mobile.number}
 </c:forEach>
