@@ -5,8 +5,10 @@
 
 
 User Details:
-<li>${user.ID}
-<li>${user.name} 
+<center>
+<li>ID:  ${user.ID}
+<li>Name : ${user.name}
+</center>
 
 Aadhar Details:
 
