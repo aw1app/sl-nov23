@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -87,13 +88,17 @@ public class UserController {
 		return "User with id=" + user.getID() + " is created. His aadhar card id=" + aadharCard.getID();
 	}
 
-	@GetMapping("/user-details")
-	@ResponseBody
-	public String userDetails(@RequestParam long id) {
+	@GetMapping("/user-details")	
+	public String userDetails(@RequestParam long id, ModelMap model ) {
 		Optional<User> userFromRepo = userRepositry.findById(id);
+		
+		model.addAttribute("id",id);
 
 		if (userFromRepo.isPresent()) {
 			User user = userFromRepo.get();
+			
+			model.addAttribute("user",user);
+			
 			AadharCard aadhar = user.getAadharCard();
 			List<MobilePhone> mobiles = user.getPhones();
 
@@ -101,11 +106,10 @@ public class UserController {
 			for (MobilePhone m : mobiles)
 				mobilesStr = mobilesStr + " " + m.getNumber();
 
-			String responseStr = "User with id=" + user.getID() + " is fetched. His/Her name is " + user.getName()
-					+ " and His/Her aadhar card no=" + aadhar.getNumber() + "Mobiles= " + mobilesStr;
-			return responseStr;
+			
+			return "user-details";
 		} else {
-			return "User with id=" + id + " not found";
+			return "user-not-found";
 		}
 
 	}
