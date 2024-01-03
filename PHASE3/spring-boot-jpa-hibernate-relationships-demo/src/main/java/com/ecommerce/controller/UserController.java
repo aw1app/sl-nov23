@@ -147,15 +147,8 @@ public class UserController {
 		for (MobilePhone m : mobiles) {
 			m.setUser(user);
 			mobilePhoneRepositry.save(m);
-		};
+		};	
 		
-		List<EducationalDegree> degrees = user.getDegrees();
-		for (EducationalDegree e : degrees) {
-			List<User> users = new ArrayList<User>();
-			users.add(user);
-			e.setUsers(users);
-			educationalDegreeRepositry.save(e);
-		};
 
 		return "User " + user.getID() + " having edu degrees added successfully!";
 	}
