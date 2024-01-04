@@ -42,6 +42,10 @@ public class TodoRestServiceConsumerController {
 	}
 	
 	// CHALENGE: Code the todo-list.jsp that shows the todos in a nice table format
+	// CHALENGE: Save the todos from the list/single to your TODO table in the DB
+	
+//	Q: Saving in db do we have to loop through and save everytime?
+//	Use	saveAll on the respositry
 	
 
 }
