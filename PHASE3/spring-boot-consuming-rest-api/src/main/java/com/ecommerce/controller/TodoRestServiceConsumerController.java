@@ -16,14 +16,15 @@ public class TodoRestServiceConsumerController {
 	
 		
 	@GetMapping("/todos/{id}")
-	@ResponseBody
 	public String todo(@PathVariable("id") int id, Model model) {
 		
 		RestTemplate restTemplate = new RestTemplate();
 		
 		Todo todo = restTemplate.getForObject("https://jsonplaceholder.typicode.com/todos/"+id, Todo.class);
 		
-		return todo.toString();
+		model.addAttribute("todo", todo);
+		
+		return "todo-details";
 		
 	}
 
