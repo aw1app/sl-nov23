@@ -182,7 +182,7 @@ public class UserController {
 				messages = messages + ", " + ((User) obj).getName()  + ": " +  voilation.getMessage();
 		}
 		
-		return new ResponseEntity<>("Input Errors! . " + messages, HttpStatus.NOT_FOUND);		
+		return new ResponseEntity<>("Input Errors! " + messages, HttpStatus.NOT_FOUND);		
 	}
 
 	//// M2M with Request Params
