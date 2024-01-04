@@ -48,10 +48,10 @@ public class ProductController {
 	
 	@PostMapping("/add-product")
 	public EProduct addProduct(@RequestBody EProduct eProduct) {
+		eProduct.setDateAddedConverted(eProduct.getDateAdded());
 		
 		EProduct savedProduct = eProductRepositry.save(eProduct);
-		return savedProduct;
-		
+		return savedProduct;		
 	}
 	
 
