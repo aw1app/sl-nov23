@@ -13,12 +13,13 @@ import com.ecommerce.entity.Todo;
 @Controller
 public class TodoRestServiceConsumerController {
 	
-	@Autowired
-	RestTemplate restTemplate;
+	
 		
-	@GetMapping("/todo/{id}")
+	@GetMapping("/todos/{id}")
 	@ResponseBody
 	public String todo(@PathVariable("id") int id, Model model) {
+		
+		RestTemplate restTemplate = new RestTemplate();
 		
 		Todo todo = restTemplate.getForObject("https://jsonplaceholder.typicode.com/todos/"+id, Todo.class);
 		
