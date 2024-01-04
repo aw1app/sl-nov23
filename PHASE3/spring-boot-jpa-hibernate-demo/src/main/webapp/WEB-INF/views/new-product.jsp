@@ -11,7 +11,11 @@
 		<br />
 		<form:label path="price">Product Price:</form:label>
 		<form:input path="price" />
+		<form:label path="dateAdded">Product Date Added:</form:label>
+		<form:input path="dateAdded" />
 		<br />
+		
+		
 
 		<form:button>Add Product</form:button>
 

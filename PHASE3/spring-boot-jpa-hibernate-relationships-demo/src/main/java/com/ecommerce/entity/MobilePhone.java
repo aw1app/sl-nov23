@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "mobilephones")
@@ -20,6 +22,7 @@ public class MobilePhone {
 
 	
 	//@Pattern(regexp = "\\d{10}")
+	@Min(value = 1000000000, message = "Mobile Number should not be less than 1000000000")
 	private long number;
 	
 	private String provider;

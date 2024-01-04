@@ -1,8 +1,10 @@
 package com.ecommerce.controller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,6 +27,11 @@ import com.ecommerce.repositry.EducationalDegreeRepositry;
 import com.ecommerce.repositry.MobilePhoneRepositry;
 import com.ecommerce.repositry.UserRepositry;
 
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
+import jakarta.validation.ValidatorFactory;
+
 @Controller
 @Validated
 public class UserController {
@@ -37,7 +44,7 @@ public class UserController {
 
 	@Autowired
 	MobilePhoneRepositry mobilePhoneRepositry;
-	
+
 	@Autowired
 	EducationalDegreeRepositry educationalDegreeRepositry;
 
@@ -107,10 +114,10 @@ public class UserController {
 	}
 
 	@PostMapping("/add-user-simplified-save")
-	@ResponseBody	
+	@ResponseBody
 	public String addUserWithMobiles(@ModelAttribute("user") @Validated User user, BindingResult result) {
-		
-		if(result.hasErrors()) {
+
+		if (result.hasErrors()) {
 			System.out.println("Hi DEBUG Input has errors" + result.getErrorCount());
 		}
 
@@ -125,40 +132,66 @@ public class UserController {
 
 		return "User " + user.getID() + " add success!";
 	}
-	
-	
+
 	//// Test Many to Many Relationship
 	@GetMapping("/add-user-with-degrees-simplified-show-form")
 	public String addUserWithDegrees(Model model) {
 		User user = new User();
 		model.addAttribute("user", user);
 
-		return "new-user-with-degrees"; // show  new-user-with-degrees.jsp
+		return "new-user-with-degrees"; // show new-user-with-degrees.jsp
 	}
 
 	@PostMapping("/add-user-with-degrees-simplified-save")
-	@ResponseBody	
-	public String addUserWithDegrees(@ModelAttribute("user") @Validated User user) {		
+	@ResponseBody
+	public String addUserWithDegrees(@ModelAttribute("user") @Validated User user, BindingResult result) {
+		System.err.println("Hi " + result.hasErrors());
 
-		userRepositry.save(user);
+		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+		Validator validator = factory.getValidator();
+
+		if (result.hasErrors()) {
+			// Handle validation errors, for example, return a custom error message
+			return "Validation failed. Please check your input.";
+		}
 
 		List<MobilePhone> mobiles = user.getPhones();
+		boolean hasValidationErrors = false;
+		List<String> violationMessages = new ArrayList<String>();
 
 		for (MobilePhone m : mobiles) {
-			m.setUser(user);
-			mobilePhoneRepositry.save(m);
-		};	
-		
 
-		return "User " + user.getID() + " having edu degrees added successfully!";
+			Set<ConstraintViolation<MobilePhone>> violations = validator.validate(m);
+
+			if (!violations.isEmpty()) {
+				hasValidationErrors = true;
+			}
+
+			for (ConstraintViolation<MobilePhone> violation : violations) {
+				violationMessages.add(violation.getRootBean().getNumber() + " : " + violation.getMessage());
+			}
+		}
+
+		if (hasValidationErrors == false) {
+			userRepositry.save(user);
+
+			for (MobilePhone m : mobiles) {
+				m.setUser(user);
+				mobilePhoneRepositry.save(m);
+			}
+
+			return "User " + user.getID() + " having edu degrees added successfully!";
+		} else {
+			return Arrays.toString(violationMessages.toArray(new String[0]));
+		}
 	}
-	
-	
+
 	//// M2M with Request Params
 	@PostMapping("/add-user-with-degrees")
 	@ResponseBody
 	public String addUserWithDegrees(@RequestParam String uName, @RequestParam long aadharCardNo,
-			@RequestParam long mobileNo1, @RequestParam long mobileNo2, @RequestParam String deg1, @RequestParam String deg2) {
+			@RequestParam long mobileNo1, @RequestParam long mobileNo2, @RequestParam String deg1,
+			@RequestParam String deg2) {
 
 		User user = new User();
 		user.setName(uName);
@@ -185,16 +218,16 @@ public class UserController {
 		List<MobilePhone> mobiles = new ArrayList<MobilePhone>();
 		mobiles.add(m1);
 		mobiles.add(m2);
-		
+
 		EducationalDegree edu1 = new EducationalDegree();
 		edu1.setName(deg1);
 		List<User> users = new ArrayList<User>();
 		users.add(user);
 		edu1.setUsers(users);
 		educationalDegreeRepositry.save(edu1);
-		
+
 		EducationalDegree edu2 = new EducationalDegree();
-		edu2.setName(deg2);		
+		edu2.setName(deg2);
 		edu2.setUsers(users);
 		educationalDegreeRepositry.save(edu2);
 
@@ -204,7 +237,6 @@ public class UserController {
 
 		return "User with id=" + user.getID() + " is created. His aadhar card id=" + aadharCard.getID();
 	}
-	
 
 	// Try this when posting JSON content
 //	@PostMapping("/add-user-simplified")

@@ -25,10 +25,10 @@ public class ProductController {
 
 	@Autowired
 	EProductRepositry eProductRepositry;
-
+   
 	@GetMapping("/add-product")
 	public String showNewProductForm(Model model) {
-
+		System.err.println("Hi 1");
 		EProduct new_product = new EProduct();
 		model.addAttribute("product", new_product);
 
@@ -37,7 +37,8 @@ public class ProductController {
 
 	@PostMapping("/add-product")
 	public String addProduct(@ModelAttribute("product") EProduct product) {
-		product.setDateAdded(new Date());
+		System.err.println("Hi 2");
+		product.setDateAddedConverted(product.getDateAdded());
 
 		eProductRepositry.save(product);
 
