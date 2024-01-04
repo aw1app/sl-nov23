@@ -23,7 +23,7 @@ public class User {
 	@Column(name="id")
 	private long ID;
 	
-	@Size(min = 3)
+	@Size(min = 3, max=10, message="User name should min 3 chars and max 10 chars")
 	private String name;
 	
 	@OneToOne(cascade = CascadeType.ALL)
