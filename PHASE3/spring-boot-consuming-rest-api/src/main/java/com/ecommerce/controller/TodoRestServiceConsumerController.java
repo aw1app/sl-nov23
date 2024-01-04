@@ -1,11 +1,11 @@
 package com.ecommerce.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
 import com.ecommerce.entity.Todo;
@@ -14,8 +14,9 @@ import com.ecommerce.entity.Todo;
 public class TodoRestServiceConsumerController {
 	
 	
+	//Fetching a single Todo
 		
-	@GetMapping("/todos/{id}")
+	@GetMapping("/todo/{id}")
 	public String todo(@PathVariable("id") int id, Model model) {
 		
 		RestTemplate restTemplate = new RestTemplate();
@@ -24,8 +25,23 @@ public class TodoRestServiceConsumerController {
 		
 		model.addAttribute("todo", todo);
 		
-		return "todo-details";
-		
+		return "todo-details";		
 	}
+	
+	//Fetching a list of Todo
+	@GetMapping("/todos")
+	public String todos(Model model) {
+		
+		RestTemplate restTemplate = new RestTemplate();
+		
+		Todo[] todos = restTemplate.getForObject("https://jsonplaceholder.typicode.com/todos", Todo[].class);
+		
+		model.addAttribute("todos", todos);
+		
+		return "todo-list";		
+	}
+	
+	// CHALENGE: Code the todo-list.jsp that shows the todos in a nice table format
+	
 
 }
