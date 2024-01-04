@@ -13,10 +13,9 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
 @Entity
 @Table(name="user")
-//@Getter
-//@Setter
 public class User {
 	
 	@Id
@@ -24,7 +23,7 @@ public class User {
 	@Column(name="id")
 	private long ID;
 	
-	
+	@Size(min = 3)
 	private String name;
 	
 	@OneToOne(cascade = CascadeType.ALL)

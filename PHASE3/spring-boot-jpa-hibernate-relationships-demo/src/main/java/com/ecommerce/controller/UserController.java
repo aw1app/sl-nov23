@@ -1,17 +1,19 @@
 package com.ecommerce.controller;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,9 +30,7 @@ import com.ecommerce.repositry.MobilePhoneRepositry;
 import com.ecommerce.repositry.UserRepositry;
 
 import jakarta.validation.ConstraintViolation;
-import jakarta.validation.Validation;
-import jakarta.validation.Validator;
-import jakarta.validation.ValidatorFactory;
+import jakarta.validation.ConstraintViolationException;
 
 @Controller
 @Validated
@@ -118,7 +118,7 @@ public class UserController {
 	public String addUserWithMobiles(@ModelAttribute("user") @Validated User user, BindingResult result) {
 
 		if (result.hasErrors()) {
-			System.out.println("Hi DEBUG Input has errors" + result.getErrorCount());
+			System.err.println("Hi DEBUG Input has errors" + result.getErrorCount());
 		}
 
 		userRepositry.save(user);
@@ -145,34 +145,15 @@ public class UserController {
 	@PostMapping("/add-user-with-degrees-simplified-save")
 	@ResponseBody
 	public String addUserWithDegrees(@ModelAttribute("user") @Validated User user, BindingResult result) {
-		System.err.println("Hi " + result.hasErrors());
-
-		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-		Validator validator = factory.getValidator();
-
-		if (result.hasErrors()) {
-			// Handle validation errors, for example, return a custom error message
-			return "Validation failed. Please check your input.";
+		
+		
+		if (result.hasErrors()) {			
+			return "Validation of User failed. Please check your user related inputs.";
 		}
 
-		List<MobilePhone> mobiles = user.getPhones();
-		boolean hasValidationErrors = false;
-		List<String> violationMessages = new ArrayList<String>();
+		List<MobilePhone> mobiles = user.getPhones();	
 
-		for (MobilePhone m : mobiles) {
-
-			Set<ConstraintViolation<MobilePhone>> violations = validator.validate(m);
-
-			if (!violations.isEmpty()) {
-				hasValidationErrors = true;
-			}
-
-			for (ConstraintViolation<MobilePhone> violation : violations) {
-				violationMessages.add(violation.getRootBean().getNumber() + " : " + violation.getMessage());
-			}
-		}
-
-		if (hasValidationErrors == false) {
+		
 			userRepositry.save(user);
 
 			for (MobilePhone m : mobiles) {
@@ -181,9 +162,27 @@ public class UserController {
 			}
 
 			return "User " + user.getID() + " having edu degrees added successfully!";
-		} else {
-			return Arrays.toString(violationMessages.toArray(new String[0]));
+		
+	}
+	
+	
+	@ExceptionHandler(value = jakarta.validation.ConstraintViolationException.class)
+	public ResponseEntity<Object> abc(ConstraintViolationException exception) {
+		String messages = "";
+		
+		Set<ConstraintViolation<?>> violations = exception.getConstraintViolations();
+		for (ConstraintViolation voilation: violations) {
+			
+			Object obj = voilation.getRootBean();
+			
+			if(obj instanceof MobilePhone)			
+			messages = messages + ", " + ((MobilePhone) obj).getNumber()  + ": " +  voilation.getMessage();
+			
+			if(obj instanceof User)			
+				messages = messages + ", " + ((User) obj).getName()  + ": " +  voilation.getMessage();
 		}
+		
+		return new ResponseEntity<>("Input Errors! . " + messages, HttpStatus.NOT_FOUND);		
 	}
 
 	//// M2M with Request Params
