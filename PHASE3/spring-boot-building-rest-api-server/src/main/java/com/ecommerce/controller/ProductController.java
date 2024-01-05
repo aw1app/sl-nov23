@@ -44,15 +44,38 @@ public class ProductController {
 		List<EProduct> products = eProductRepositry.findAll();
 		return products;
 	}
-	
-	
+
 	@PostMapping("/add-product")
 	public EProduct addProduct(@RequestBody EProduct eProduct) {
 		eProduct.setDateAddedConverted(eProduct.getDateAdded());
-		
+
 		EProduct savedProduct = eProductRepositry.save(eProduct);
-		return savedProduct;		
+		return savedProduct;
 	}
-	
+
+	@PostMapping("/edit-product/{id}")
+	public EProduct editProduct(@PathVariable("id") long id, @RequestBody EProduct eProduct) {
+
+		Optional<EProduct> productFromRepo = eProductRepositry.findById(id);
+
+		if (productFromRepo.isPresent()) {
+
+			EProduct product = productFromRepo.get();
+
+			if (eProduct.getName() != null && !eProduct.getName().equals(""))
+				product.setName(eProduct.getName());
+
+			if (eProduct.getPrice() != null)
+				product.setPrice(eProduct.getPrice());
+
+			EProduct savedProduct = eProductRepositry.save(product);
+
+			return savedProduct;
+		} else {
+			return new EProduct();
+			// return "Product with id = "+ id + " not found";
+		}
+
+	}
 
 }
