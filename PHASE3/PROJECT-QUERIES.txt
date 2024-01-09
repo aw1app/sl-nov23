@@ -1,3 +1,8 @@
+Do we have to show different view for admin and normal user? 
+If yes then do we have to create two separte jsp list of pages for them?
+
+
+
 5.	Sir let say we are passing a JSON like this {
     "id": 38323,
     "name": "SomeOne",
@@ -8,3 +13,32 @@
     }
 }
 Means course is also an model which is in relationship with the parent object? So if we want to capture it in the api, then will it automatically mapped to the model along with the relationship?
+
+
+7.	How to Show date field using spring form tags?
+Only as String
+
+
+Use of @allArgsContstuctor and @noArgsConstructor annotations in lombok?
+ what's the use of these constructors
+
+
+What is @Service annotation and it’s use? 
+practical use - we don't one. it is  however an approach, a good approach.
+
+Difference between Repository concept and Dao Concept?
+DAO is a wrapper aound Repository to include some extra business logic.
+
+In fact @Service  is nothing but the DAO class. 
+
+
+QUIZ
+Sir but the relationship between the user and quiz will be @manytomany ? So it will be complex. How to handle it?
+
+what is JSTL?
+A JSP tag library
+Instead of writing scriptlets, we can use JSTL.
+
+No Sir I am asking that To loop through in the jsp page and dynamic showing can we use jSTL?
+Yes for looping. It is actually more!
+
