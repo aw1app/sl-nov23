@@ -42,3 +42,10 @@ Instead of writing scriptlets, we can use JSTL.
 No Sir I am asking that To loop through in the jsp page and dynamic showing can we use jSTL?
 Yes for looping. It is actually more!
 
+
+what is ResponseEntity<> ? 
+It is used in sending the response back from a controller method.
+ResponseEntity will have both the response and the http status code.
+
+Difference between returning a Iterable <Entity> type and ResponseEntity<Iterable< Entity >> type in an api response.?
+
