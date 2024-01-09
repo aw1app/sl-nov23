@@ -20,7 +20,6 @@ class ConditionalTestDemo {
 		int y = 5;
 
 		assertEquals(7, cal.add(x, y));
-
 	}
 
 	@Test
