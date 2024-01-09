@@ -49,3 +49,44 @@ ResponseEntity will have both the response and the http status code.
 
 Difference between returning a Iterable <Entity> type and ResponseEntity<Iterable< Entity >> type in an api response.?
 
+
+
+
+
+APIs
+localhost:8080/add-question
+{
+"question":"Qiuz title",
+"choices": ["choice a", "choice b ", " choice c", "choice d"],
+"answer": 3
+}
+
+
+localhost:8080/add-quiz
+{
+
+"quizTitle":"Qiuz title",
+
+}
+
+
+localhost:8080/add-question-to-quiz/1/2
+NO BODY for This request
+
+
+
+
+localhost:8080/take-quiz/1
+[
+    
+    {
+        questionId:1,
+        answer:3
+    },
+
+    {
+        questionId:2,
+        answer:4
+    },
+]
+
