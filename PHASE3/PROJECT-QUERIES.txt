@@ -1,0 +1,10 @@
+5.	Sir let say we are passing a JSON like this {
+    "id": 38323,
+    "name": "SomeOne",
+    "age": 23,
+    "course": {
+                "id": 2,
+                "name": "Chemistry"
+    }
+}
+Means course is also an model which is in relationship with the parent object? So if we want to capture it in the api, then will it automatically mapped to the model along with the relationship?
