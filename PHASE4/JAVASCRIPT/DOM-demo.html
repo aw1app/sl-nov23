@@ -20,7 +20,11 @@
             allPs[i].textContent = "Hello World";
             allPs[i].style.color = "red";
             allPs[i].style.visibility="hidden";
+        }
 
+        function add(x,y){                    
+
+            return parseInt(x)+parseInt(y);
         }
 
     </script>
@@ -45,6 +49,12 @@
     <button onclick="f2(0)"> Call F2 to change para 1</button>
     <button onclick="f2(1)"> Call F2 to change para 2</button>
     <button onclick="f2(2)"> Call F2 to change para 3</button>
+
+    <br>
+    Num1: <input name="num1" id="num1"> , 
+    Num2:<input name="num2" id="num2">
+    <br>Result:<h2 id="result"></h2>
+    <button onclick="document.getElementById('result').textContent  = add(document.getElementById('num1').value, document.getElementById('num2').value)"> Add number</button>
 
    </body>
 
