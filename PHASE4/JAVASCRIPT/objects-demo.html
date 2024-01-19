@@ -19,6 +19,9 @@
 
     document.write("<br>"+car1.displayProps());
 
+    Car.prototype.color="red";
+    document.write("<br>"+car1.color);
+
 </script>
 
 <script>
@@ -34,6 +37,9 @@
 
         displayProps =  () =>this.name + ", " + this.price;
 
+        getPrice =  () => this.price;
+        setPrice =  (price) => this.price=price;
+
     }
 
     let bus1 = new Bus("Volvo", 4000000);
@@ -43,5 +49,10 @@
     document.write("<br>"+bus1.price);
     document.write("<br>"+bus1.displayProps());
 
+    //challenge : In the Bus class add getter and setter for price. Use AFs
+    // SOLN: 
+
+    bus1.setPrice(25000);
+    document.write("<br> New Bus name, price is:  "+bus1.displayProps());
 
 </script>
