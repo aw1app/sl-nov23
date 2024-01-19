@@ -1,22 +1,44 @@
 <script>
+    //Traditional JS obj creation
+    function Car(name, price) {
 
-function Car(name, price){
+        this.name = name;
+        this.price = price;
 
-    this.name= name;
-    this.price= price;
+        this.displayProps = function () {
+            return this.name + ", " + this.price;
+        }
 
-    this.displayProps = function (){
-        return this.name + ", " + this.price;
+    };
+
+    let car1 = new Car("Maruti", 500000);
+    let car2 = new Car("Ford", 1500000);
+
+    document.write("<br>"+car1.name);
+    document.write("<br>"+car1.price);
+
+    document.write("<br>"+car1.displayProps());
+
+</script>
+
+<script>
+    //ES6 JS obj creation appraoch
+    document.write("<br><br>"+"Now in ES6 JS obj creation appraoch script block"+"<br>");
+
+    class Bus {
+
+        constructor(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
     }
 
-};
+    let bus1 = new Bus("Volvo", 4000000);
+    let bus2 = new Bus("Tata", 2000000);
 
-let car1 = new Car("Maruti", 500000);
-let car2 = new Car("Ford", 1500000);
+    document.write("<br>"+bus1.name);
+    document.write("<br>"+bus1.price);
 
-alert(car1.name);
-alert(car1.price);
-
-alert(car1.displayProps());
 
 </script>
