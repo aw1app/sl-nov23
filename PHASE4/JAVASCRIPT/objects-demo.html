@@ -32,6 +32,8 @@
             this.price = price;
         }
 
+        displayProps =  () =>this.name + ", " + this.price;
+
     }
 
     let bus1 = new Bus("Volvo", 4000000);
@@ -39,6 +41,7 @@
 
     document.write("<br>"+bus1.name);
     document.write("<br>"+bus1.price);
+    document.write("<br>"+bus1.displayProps());
 
 
 </script>
