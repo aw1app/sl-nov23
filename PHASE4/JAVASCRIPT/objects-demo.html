@@ -1,0 +1,22 @@
+<script>
+
+function Car(name, price){
+
+    this.name= name;
+    this.price= price;
+
+    this.displayProps = function (){
+        return this.name + ", " + this.price;
+    }
+
+};
+
+let car1 = new Car("Maruti", 500000);
+let car2 = new Car("Ford", 1500000);
+
+alert(car1.name);
+alert(car1.price);
+
+alert(car1.displayProps());
+
+</script>
