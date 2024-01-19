@@ -1,0 +1,36 @@
+<script>
+
+    // Traditional JS way of writing functions
+    /*
+    function add(x, y) {
+
+        return parseInt(x) + parseInt(y);
+    };
+    */
+
+    // Using arrow functions approach
+
+    /*
+    let add = (x, y) => {        
+        return parseInt(x) + parseInt(y);
+    };
+    */
+
+    let add = (x, y) => parseInt(x) + parseInt(y);
+
+    // write an AF that print a given message as an alert;
+    let messagePrint = message => alert(message);
+
+</script>
+
+
+<br>
+    Num1: <input name="num1" id="num1"> , 
+    Num2:<input name="num2" id="num2">
+    <br>Result:<h2 id="result"></h2>
+    <button onclick="document.getElementById('result').textContent  = add(document.getElementById('num1').value, document.getElementById('num2').value)"> Add number</button>
+
+
+    <br>
+    Your message: <input name="message" id="message">
+    <button onclick="messagePrint(document.getElementById('message').value)"> Invoke messagePrint  </button>
