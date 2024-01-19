@@ -15,7 +15,14 @@
             }
 
             alert("Outside the block " + c); // if c was decl using let keyword, then this statement will be error. Not if var was used.
+        };
+
+        {
+            let z ="hello";
+            alert("Inside the block " +z);
         }
+        alert("Outside the block " +z);//if z was decl using let keyword, then this statement will be error. Not if var was used.
+        
 
 
     </script>
