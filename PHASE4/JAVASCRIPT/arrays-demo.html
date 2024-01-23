@@ -23,3 +23,18 @@
     splicedArray.forEach(e => document.write("<li>" + e.toUpperCase()));
 
 </script>
+
+
+<script>
+    document.write("<br><br><b>MAP and FILTER DEMO</b>");
+    const numbers = [1, 2, 3, 4, 5];
+
+    const numbersMapped  = numbers.map( e => e*e );
+
+    document.writeln(`numbersMapped = ${numbersMapped}`);
+
+    const numbersFiltered  = numbers.filter( e => e % 2 === 0 );
+
+    document.writeln(`<br>numbersFiltered = ${numbersFiltered}`);
+
+</script>
