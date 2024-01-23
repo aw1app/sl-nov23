@@ -16,3 +16,7 @@ console.log(result);
 let arrow_result = arrowf1(4, 5);
 console.log(arrow_result);
 f2(40, 5);
+function f3(x, y) {
+    return function () { console.log("Hi"); };
+}
+;
