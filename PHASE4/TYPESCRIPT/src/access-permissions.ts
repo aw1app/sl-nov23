@@ -22,3 +22,5 @@ let bus3 : Bus = new Bus("ford",100, 90, "petrol"); // in TS
 console.log(`Mileage is ${bus3.showMileage()}`);
 
 // bus3.engineType='Electric'; // ERROR engineType is readonly
+bus3.name; // name is public, so fine to access here
+bus3.name = "Toyata";
