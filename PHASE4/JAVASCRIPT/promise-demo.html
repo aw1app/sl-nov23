@@ -1,0 +1,22 @@
+<script>
+
+    let f1 = (res) => console.log(res);
+    let f2 = (err) => console.log(err);
+
+    let myPromise  = new Promise( (f1,f2) => {
+
+        let i=0;
+        for( i=0; i< 1000000; i++){
+            
+        };
+        
+        if(i===1000000) f1(i);
+
+        if(i!==1000000) f2(new Error("i is not 1000000"));
+
+    }
+    );
+
+
+
+</script>
