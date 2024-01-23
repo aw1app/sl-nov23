@@ -4,7 +4,7 @@ interface Human{
     walkFast():void ;
 }
 
-class Person implements Human{
+export class Person implements Human{
     name:string;
 
     constructor(name:string){
@@ -12,7 +12,7 @@ class Person implements Human{
     }
 
     walkFast():void {
-        console.log("Walking ...., fast walking");
+        console.log(`${this.name } : Walking ...., fast walking`);
     }
 };
 

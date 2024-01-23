@@ -27,6 +27,12 @@ let car1:Car = new Car("ford",100); // in TS
 
 console.log(`Car 1 name is ${car1.name}`);
 
+import {Person} from './interface-demo';
+
+let  per10: Person = new Person("Mr President");
+per10.walkFast();
+
+
 // Arrays
 console.log(`\n Array type Demo \n`);
 let myArr1 = []; // in Plain JS
