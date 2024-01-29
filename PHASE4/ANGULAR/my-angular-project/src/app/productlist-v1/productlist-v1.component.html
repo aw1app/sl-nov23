@@ -2,10 +2,16 @@
 
 
     List of Products on sale <br>
+    <hr><br>
 
-    <ul *ngFor="let prod of products">
-        <li>{{prod.productName}},{{prod.price}}</li>
-    </ul>
+    <li *ngFor="let prod of products">
+        {{ prod.productName}}
+    </li>
+    {{products.length}}
+
+    
+
+   
 
 
 </div>
