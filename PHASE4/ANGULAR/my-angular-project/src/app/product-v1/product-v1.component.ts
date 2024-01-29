@@ -13,7 +13,7 @@ export class ProductV1Component {
   product!: Product;
   
   constructor(){
-    this.product = new Product(1,"HP Mouse","..\..\..\assets\images\HPMouse.JPG",250);
+    this.product = new Product(1,"HP Mouse","../../assets/images/HPMouse.JPG",250);
   }
 
 }
