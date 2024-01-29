@@ -1,1 +1,11 @@
-<p>productlist-v1 works!</p>
+<div style="border: 2px solid rgb(0, 255, 8);">
+
+
+    List of Products on sale <br>
+
+    <ul *ngFor="let prod of products">
+        <li>{{prod.productName}},{{prod.price}}</li>
+    </ul>
+
+
+</div>
