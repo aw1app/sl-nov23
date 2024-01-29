@@ -1,0 +1,6 @@
+what about fetching the data from backend? In which component it will happen, Controller?
+Yes, More appropriately in Service class
+
+Sir if we will write all our views in the frontend then why to use the view layer in the backend, 
+in real time scenario?
+We will directly return the JSON and XML data from backend.
