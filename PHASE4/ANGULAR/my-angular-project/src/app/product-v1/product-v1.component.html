@@ -12,7 +12,7 @@
     <span [style.background-color]="product.price > 1000?'YELLOW':'LIGHTGREEN'" > Price : {{ product.price }}</span>
     <p [style.color]="product.productInStock?'GREEN':'RED'" > In Stock : {{ product.productInStock }}</p>
 
-    <button (click)="addLike()"> LIKE </button>
-    <br> No of Like so far : {{ noOfLikes }}
+    <button (click)="addLike()" > LIKE </button>
+    <br> No of Likes so far : {{ noOfLikes }}
 
 </div>
