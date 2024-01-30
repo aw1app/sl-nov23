@@ -7,11 +7,14 @@ export class Product {
 
     productImage: string = "";
 
-    constructor(id: number, productName: string, productImage: string, price: number) {
+    productInStock:boolean=true;
+
+    constructor(id: number, productName: string, productImage: string, price: number, productInStock:boolean) {
         this.id = id;
         this.productName = productName;
         this.productImage = productImage;
         this.price = price;
+        this.productInStock= productInStock;
     }
 
 }
