@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { Product } from '../model/product';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'product-v1',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './product-v1.component.html',
   styleUrl: './product-v1.component.css'
 })
@@ -49,6 +50,12 @@ export class ProductV1Component implements OnInit, OnChanges {
     alert("INSIDE callParentForMoney");
     this.wantMoneyEvent.emit(this.amountToAskParent);
     this.amountToAskParent = this.amountToAskParent + 50;
+  }
+
+  comments:string="";
+  addComment(comment:string):void{
+    //console.log("Got a comment : " + comment);
+    this.comments=this.comments+"\n " +comment; 
   }
 
   constructor() {

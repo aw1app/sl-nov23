@@ -22,5 +22,7 @@
     <br> <br>CHILD PARENT COMM DEMO
     <button (click)="callParentForMoney()" > CALL PARENT FOR MONEY </button>
    
-
+    <br> <br>Any comments?
+    <input type="text" (input)="addComment(comment.value)" #comment>
+    <textarea cols="60" rows="8" readonly>{{comments}}</textarea>
 </div>
