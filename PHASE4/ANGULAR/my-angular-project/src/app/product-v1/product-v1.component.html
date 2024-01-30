@@ -15,4 +15,12 @@
     <button (click)="addLike()" > LIKE </button>
     <br> No of Likes so far : {{ noOfLikes }}
 
+    <br> Rate this Product now (current rating : {{ rating }}):
+    <button (click)="rate($event)" id="rate1"> 1 </button>
+    <button (click)="rate($event)" id="rate5"> 5 </button>
+
+    <br> <br>CHILD PARENT COMM DEMO
+    <button (click)="callParentForMoney()" > CALL PARENT FOR MONEY </button>
+   
+
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { Product } from '../model/product';
 
 @Component({
@@ -12,25 +12,46 @@ export class ProductV1Component implements OnInit, OnChanges {
 
   product!: Product;
 
-  hidden:boolean=true;
+  hidden: boolean = true;
 
   // Let's recieve the following inputs from the parent component
-  @Input("name") name!:string
-  @Input("image") image!:string
-  @Input("price") price!:string
-  @Input("inStock") inStock!:boolean
-  
+  @Input("name") name!: string
+  @Input("image") image!: string
+  @Input("price") price!: string
+  @Input("inStock") inStock!: boolean
+
   // constructor(){
   //   this.product = new Product(1,"HP Mouse","../../assets/images/HPMouse.JPG",250);
   // }
 
-  noOfLikes:number=0;
+  noOfLikes: number = 0;
+  rating: number = 0;
 
-  addLike():void{
+  addLike(): void {
     this.noOfLikes++;
   }
 
-  constructor(){ 
+  rate(evt: any): void {
+    //alert(event.target.id);
+
+    if (evt.target.id === 'rate1')
+      this.rating = 1;
+
+    if (evt.target.id === 'rate5')
+      this.rating = 5;
+  };
+
+  @Output() wantMoneyEvent = new EventEmitter<number>();
+
+  amountToAskParent: number = 50;
+
+  callParentForMoney(): void {
+    alert("INSIDE callParentForMoney");
+    this.wantMoneyEvent.emit(this.amountToAskParent);
+    this.amountToAskParent = this.amountToAskParent + 50;
+  }
+
+  constructor() {
     console.log("INSIDE constructor of ProductV1Component");
   }
 
@@ -40,7 +61,7 @@ export class ProductV1Component implements OnInit, OnChanges {
 
   ngOnInit(): void {
     console.log("INSIDE ngOnInit of ProductV1Component");
-    this.product = new Product(1,this.name,this.image,Number(this.price),this.inStock );
+    this.product = new Product(1, this.name, this.image, Number(this.price), this.inStock);
   }
 
   ngDoCheck(): void {

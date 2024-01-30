@@ -21,9 +21,15 @@ export class AppComponent implements OnInit, OnChanges {
 
   inStockValFromParent:boolean=true;
 
+  f1(evt:any):void{
+    alert("Got an event from child haviing data : " + evt)
+  }
+
   constructor() {
     console.log("INSIDE constructor");
   } 
+
+
 
   ngDoCheck(): void {
     console.log("INSIDE ngDoCheck");
