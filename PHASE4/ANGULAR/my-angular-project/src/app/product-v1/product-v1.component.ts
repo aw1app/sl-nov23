@@ -24,6 +24,12 @@ export class ProductV1Component implements OnInit, OnChanges {
   //   this.product = new Product(1,"HP Mouse","../../assets/images/HPMouse.JPG",250);
   // }
 
+  noOfLikes:number=0;
+
+  addLike():void{
+    this.noOfLikes++;
+  }
+
   constructor(){ 
     console.log("INSIDE constructor of ProductV1Component");
   }
