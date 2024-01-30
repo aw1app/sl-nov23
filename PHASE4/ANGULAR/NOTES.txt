@@ -4,3 +4,10 @@ Yes, More appropriately in Service class
 Sir if we will write all our views in the frontend then why to use the view layer in the backend, 
 in real time scenario?
 We will directly return the JSON and XML data from backend.
+
+
+CONCEPTS ILLUSTRATED
+product-v1.component  - Data Binding, Event Binding, Child <--> Parent communication
+addproduct.component  - Form Processing and Validation
+product-v2.component  -  Services
+product-v3.component  -  Services with Data coming from REST API servers 

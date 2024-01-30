@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { ProductV1Component } from './product-v1/product-v1.component';
 import { ProductComponent } from './product/product.component';
 import { ProductlistV1Component } from './productlist-v1/productlist-v1.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { ProductlistV1Component } from './productlist-v1/productlist-v1.componen
   imports: [CommonModule, RouterOutlet,
     ProductComponent,
     ProductV1Component,
-    ProductlistV1Component],
+    ProductlistV1Component,
+    AddproductComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
