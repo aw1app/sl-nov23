@@ -1,17 +1,15 @@
 <div style="border: 2px dotted rgb(0, 102, 255);">
 
-    <p> Name : {{ product.productName }}</p>
+    <!-- <p> Name : {{ product.productName }}</p>
     <p> <img src="{{product.productImage}}" width="200" height="200"></p>
-    <p> Price : {{ product.price }}</p>
+    <p> Price : {{ product.price }}</p> -->
 
 
-</div>
 
-<div style="border: 2px dotted rgb(0, 102, 255);">
     <br>Property Binding Demo<br>
     <p> Name : {{ product.productName }}</p>
     <p> <img [src]="product.productImage" width="200" height="200"></p>
-    <p> Price : {{ product.price }}</p>
+    <span [style.background-color]="product.price > 1000?'YELLOW':'LIGHTGREEN'" > Price : {{ product.price }}</span>
     <p [style.color]="product.productInStock?'GREEN':'RED'" > In Stock : {{ product.productInStock }}</p>
 
 </div>

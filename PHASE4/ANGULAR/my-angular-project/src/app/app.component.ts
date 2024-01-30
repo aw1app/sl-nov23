@@ -17,6 +17,8 @@ import { ProductlistV1Component } from './productlist-v1/productlist-v1.componen
 })
 export class AppComponent implements OnInit, OnChanges {
   title = 'ECommerce Products';
+  titleType = "BIG";
+
   inStockValFromParent:boolean=true;
 
   constructor() {
