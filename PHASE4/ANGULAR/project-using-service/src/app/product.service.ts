@@ -6,7 +6,7 @@ import { Product } from './model/product';
 })
 export class ProductService {
 
-  products!: Product[];
+  products: Product[]=[];
 
   constructor(){
     this.products[0] = new Product(1,"HP Mouse","../../assets/images/HPMouse.JPG",250,true);
