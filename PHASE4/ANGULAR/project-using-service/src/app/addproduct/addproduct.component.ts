@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'addproduct',
@@ -13,7 +14,11 @@ export class AddproductComponent {
 
   productForm!: FormGroup;
 
-  constructor(private fb: FormBuilder){
+  productService!: ProductService;
+
+  constructor(productService: ProductService, private fb: FormBuilder){
+
+    this.productService = productService;
     
     this.productForm = this.fb.group(
       {
@@ -24,12 +29,7 @@ export class AddproductComponent {
 
   }
 
+  addProduct= ():number =>  this.productService.addProduct(this.productForm.value.productName,this.productForm.value.productPrice);
   
-
-
-  addProduct():void{  
-    console.log(this.productForm.value.productName);
-    console.log(this.productForm.value.productPrice);
-  }
 
 }

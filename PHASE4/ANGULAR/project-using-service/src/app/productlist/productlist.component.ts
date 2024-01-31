@@ -16,12 +16,16 @@ export class ProductlistComponent implements OnInit {
   productService!: ProductService;
 
   constructor( productService: ProductService){
-    console.log("INSIDE ProductlistComponent constructor")
     this.productService = productService;
   }
 
   ngOnInit():void{
     this.products = this.productService.getAllProducts();
-  }
+  }  
+
+  deleteProduct = (id:number ) => {    
+    this.productService.deleteProduct(id);
+    this.products = this.productService.getAllProducts();
+   }
 
 }
