@@ -27,7 +27,9 @@ export class Productlistv1Component {
         products => this.products = products,
         error => console.error('Error fetching products:', error)
       );
-  }
+  };
+
+  
 
   deleteProduct = (id: number): void => {
     this.productService.deleteProduct(id)
@@ -35,7 +37,7 @@ export class Productlistv1Component {
         result => console.log(result),
         error => console.error('Error fetching products:', error)
       );
-      
+
     this.productService.getAllProductsFromSpringBootBackend()
       .subscribe(
         products => this.products = products,

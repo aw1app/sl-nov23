@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../model/product';
 import { Productv1Service } from '../productv1.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-v1',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product-v1.component.html',
   styleUrl: './product-v1.component.css'
 })

@@ -1,1 +1,10 @@
-<p>product-v1 works!</p>
+<div class="product-card" *ngIf="product">
+    <!-- <img [src]="product.thumbnail"> -->
+    
+    <p>Product ID: {{ product.id }}</p>
+    <p>Name: {{ product.name | uppercase }}</p>
+
+    <p class="price">Price: {{ product.price | currency:'INR' }}</p>
+
+    
+</div>
