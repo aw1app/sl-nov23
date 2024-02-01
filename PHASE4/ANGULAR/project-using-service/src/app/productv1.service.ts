@@ -9,7 +9,7 @@ import { Observable, throwError } from 'rxjs';
 export class Productv1Service {
 
   //SpringBoot project host URL
-  backEndUrl: String = "http://localhost/product";
+  backEndUrl: String = "http://localhost:3000/products"; 
 
   products: Product[] = [];
 
@@ -22,12 +22,12 @@ export class Productv1Service {
   //SpringBoot integration
   getAllProductsFromSpringBootBackend(): Observable<Product[]> 
   {
-    return this.httpClient.get<Product[]>(`${this.backEndUrl}/list`);
+    return this.httpClient.get<Product[]>(`${this.backEndUrl}`);
   }
 
   getProductFromSpringBootBackend(id:number): Observable<Product> 
   {
-    return this.httpClient.get<Product>(`${this.backEndUrl}/details/${id}`);
+    return this.httpClient.get<Product>(`${this.backEndUrl}/${id}`);
   }
 
   deleteProduct = (id: number): Observable<string> => {   

@@ -1,0 +1,42 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "HP Mouse",
+            "price": 200.25,
+            "dateAdded": "2024-01-01"
+        },
+        {
+            "id": 2,
+            "name": "HP Keyboard",
+            "price": 1200.25,
+            "dateAdded": "2024-01-01"
+        },
+        {
+            "id": 3,
+            "name": "HP Monitor",
+            "price": 1200.25,
+            "dateAdded": "2024-01-01"
+        }
+    ],
+    "employees": [
+        {
+            "id": 1,
+            "first_name": "Sebastian",
+            "last_name": "Eschweiler",
+            "email": "sebastian@codingthesmartway.com"
+        },
+        {
+            "id": 2,
+            "first_name": "Steve",
+            "last_name": "Palmer",
+            "email": "steve@codingthesmartway.com"
+        },
+        {
+            "id": 3,
+            "first_name": "Ann",
+            "last_name": "Smith",
+            "email": "ann@codingthesmartway.com"
+        }
+    ]
+}

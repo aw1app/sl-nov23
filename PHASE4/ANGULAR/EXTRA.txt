@@ -1,3 +1,6 @@
-1. httpclient post example 
+1. httpclient post example ( add a product to the spring rest api server)
 (ADDED - NO)
+
+TODO:
+JSON Server (id based fetch ?? )
 

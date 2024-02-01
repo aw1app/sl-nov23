@@ -9,7 +9,15 @@
     <router-outlet></router-outlet>
 </div>
 
-
+<br><br><br><br>
+<p>Switch demo</p>
+  <div> There are {{getLength()}}    numbers.</div>
+<div [ngSwitch]="getLength()">
+    <span *ngSwitchCase="0">No number is are</span>
+    <span *ngSwitchCase="1">One number is are</span>
+    <span *ngSwitchCase="2">Two number is are</span>
+    <span *ngSwitchCase="3">Three number is are</span>
+</div>
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
 <h3 style="text-align: center;">Thank you. Visit us again</h3>

@@ -35,7 +35,7 @@ export class AppComponent {
 
   varX:boolean=true;
   // NgSwitch Directive demo start
-  arr: number[] = [1, 2, 3];
+  arr: number[] = [1, 3];
   arrlen!: number;
 
   getLength(): number {
