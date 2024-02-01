@@ -1,6 +1,15 @@
 1. httpclient post example ( add a product to the spring rest api server)
-(ADDED - NO)
+(ADDED - YES)
 
-TODO:
-JSON Server (id based fetch ?? )
+The productv1.service.ts uses JSON Server as the REST API Server.
+List all Products
+Detail a Single Product
+Add Product
+
+are all implemented.
+
+If you want use Spring REST API server instead,
+see productv1.service-springrestapi.ts
+
+
 
