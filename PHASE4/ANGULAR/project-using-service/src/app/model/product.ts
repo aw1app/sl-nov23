@@ -2,7 +2,7 @@ export class Product {
 
     id: number = -1;
 
-    productName: string = "HP Mouse";
+    name: string = "HP Mouse";
     price: number = 250;
 
     productImage: string = "";
@@ -11,7 +11,7 @@ export class Product {
 
     constructor(id: number, productName: string, productImage: string, price: number, productInStock:boolean) {
         this.id = id;
-        this.productName = productName;
+        this.name = productName;
         this.productImage = productImage;
         this.price = price;
         this.productInStock= productInStock;

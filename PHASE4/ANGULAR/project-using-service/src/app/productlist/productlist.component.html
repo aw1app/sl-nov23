@@ -16,7 +16,7 @@ List of Products on sale
 
         <tr *ngFor="let prod of products; index as i">
             <td> {{i+1}}</td>
-            <td> {{prod.productName}}</td>
+            <td> {{prod.name}}</td>
             <td> {{prod.price}}</td>
             <td> <button (click)="deleteProduct(prod.id)" > DELETE </button></td>
         </tr>
