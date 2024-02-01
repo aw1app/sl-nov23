@@ -7,8 +7,8 @@ import { ProductlistComponent } from './productlist/productlist.component';
 
 export const routes: Routes = [
 
-    { path: 'home', component: AppComponent },
-    { path: 'product-list', component: Productlistv1Component },
+    { path: 'product-list-old', component: ProductlistComponent },
+    { path: 'product-list-v1', component: Productlistv1Component },
     { path: 'add-product', component: AddproductComponent },
     /*{ path: 'product/:productId', component: ProductlistComponent },
   { path: '*', component: NoSuchComponent },*/

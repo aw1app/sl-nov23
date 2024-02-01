@@ -1,0 +1,56 @@
+ <p style="text-align: center;"> {{ title}} </p> 
+<productlistv1></productlistv1>
+
+<br><br>
+ <productlist></productlist>
+
+
+<addproduct></addproduct>
+
+<br><br>
+<p [ngClass]="{textborder:varX}" >Congratulations! Your app is running. 🎉</p>
+
+  <p [ngStyle]="{'font-size.px':varX}" >Hi</p>
+
+  <p>Switch demo</p>
+  <div> There are {{getLength()}}    numbers.</div>
+<div [ngSwitch]="getLength()">
+    <span *ngSwitchCase="0">No number is added</span>
+    <span *ngSwitchCase="1">One number is added</span>
+    <span *ngSwitchCase="2">Two number is added</span>
+    <span *ngSwitchCase="3">Three number is added</span>
+</div>
+
+
+ <br><br>
+
+PIPES DEMO:
+<h2>Lower and Upper case Pipe Example</h2>
+<p>In lowerCase : {{title | lowercase}}</p>
+<p>In uppercase : {{title | uppercase}}</p>
+
+<h2>Decimal Pipe Example</h2>
+<p>pi (no formatting): {{pi}}</p>
+<p>pi (.5-5): {{pi | number:'.5-5'}}</p>
+<p>pi (2.10-10): {{pi | number:'2.10-10'}}</p>
+<p>pi (.3-3): {{pi | number:'.3-3'}}</p>
+
+<h2>Currency Pipe Example</h2>
+<p>A in USD: {{a | currency:'USD':true}}</p>
+<p>B in INR: {{b | currency:'INR':false:'4.2-2'}}</p>
+
+<h2>Date Pipe Example</h2>
+<h4>1. Today is {{today}}</h4>
+<h4>2. Today is {{today | date}}</h4>
+<h4>3. Today is {{today | date:"dd/MM/yyyy"}}</h4>
+
+<h2>JSON Pipe Example</h2>
+<h4>Without JSON Pipe.</h4>
+{{obj}}
+<h4>With JSON Pipe.</h4>
+{{obj | json}}
+
+ 
+ 
+
+ 
