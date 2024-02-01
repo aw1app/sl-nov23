@@ -5,6 +5,7 @@ import { AddproductComponent } from './addproduct/addproduct.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { Productlistv1Component } from './productlistv1/productlistv1.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NosuchComponent } from './nosuch/nosuch.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [CommonModule, RouterOutlet, HttpClientModule, RouterModule,
     AddproductComponent,
     ProductlistComponent,
-    Productlistv1Component],
+    Productlistv1Component,
+    NosuchComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

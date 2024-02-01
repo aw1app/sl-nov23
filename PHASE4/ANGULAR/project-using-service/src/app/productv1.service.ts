@@ -25,6 +25,11 @@ export class Productv1Service {
     return this.httpClient.get<Product[]>(`${this.backEndUrl}/list`);
   }
 
+  getProductFromSpringBootBackend(id:number): Observable<Product> 
+  {
+    return this.httpClient.get<Product>(`${this.backEndUrl}/details/${id}`);
+  }
+
   deleteProduct = (id: number): Observable<string> => {   
     return this.httpClient.get<string>(`${this.backEndUrl}/delete-product/${id}`);
   };
