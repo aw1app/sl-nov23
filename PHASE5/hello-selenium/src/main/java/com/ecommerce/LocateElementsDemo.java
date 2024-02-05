@@ -35,6 +35,10 @@ public class LocateElementsDemo {
 		Select select = new Select(daySelectElement);
 		select.selectByValue("11");
 		
+		// Locate the Gender and set it to M/F/C
+		WebElement gender= driver.findElement(By.cssSelector("span > span > input[type='radio'][value='1']"));
+		gender.click(); // selects Female
+		
 
 	}
 
