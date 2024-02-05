@@ -1,0 +1,1 @@
+sir we have to give the titile and chrome extension url then it will redirect  to the chrome browser
