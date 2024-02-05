@@ -28,6 +28,7 @@ public class LocateElementsDemo {
 		String baseUrl = "https://www.facebook.com/r.php?locale=en_GB&display=page";
 
 		driver.get(baseUrl);
+		System.out.println("Successfully launched Facebook acct creation page.");
 		
 		//The Day Dropdown
 		String fullXPathOfDayDropDown = "/html/body/div[1]/div[1]/div[1]/div[2]/div/div[2]/div/div/div[1]/form/div[1]/div[5]/div[2]/span/span/select[1]";
@@ -35,9 +36,13 @@ public class LocateElementsDemo {
 		Select select = new Select(daySelectElement);
 		select.selectByValue("11");
 		
+		System.out.println("Successfully located Day Select List and set it to value 11");
+		
 		// Locate the Gender using CSS selector and set it to M/F/C
 		WebElement gender= driver.findElement(By.cssSelector("span > span > input[type='radio'][value='1']"));
 		gender.click(); // selects Female
+		
+		System.out.println("Successfully located Gender radio feild and set it to value Female");
 		
 
 	}
