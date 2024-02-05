@@ -16,7 +16,7 @@ public class LocateElementsDemo {
 		googleNewAccCreation();
 		
 		Thread.sleep(5000);
-		
+		driver.close();
 	}
 	
 	// google New Acc Creation
