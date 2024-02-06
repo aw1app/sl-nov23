@@ -52,6 +52,8 @@ public class AdvancedLocatingElements {
 		
 		System.out.printf("\n alert text is %s \n", alert.getText());
 		
+		Thread.sleep(10000);
+		
 		alert.accept();
 
 	}
