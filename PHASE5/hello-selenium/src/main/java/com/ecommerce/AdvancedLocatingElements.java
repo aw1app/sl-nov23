@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -16,6 +18,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AdvancedLocatingElements {
 	static WebDriver driver = new FirefoxDriver();
+	
+	static String baseUrlOfTestHtml = "file:///F:/Users/home/git/sl-nov23/PHASE5/hello-selenium/src/main/resources/test.html";
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -24,19 +28,30 @@ public class AdvancedLocatingElements {
 
 		// demoAdvancedXPathCSSSelector();
 		// demoTableDetails() ;
-		demoExternalElementsAlerts();
+		//demoExternalElementsAlerts();
+		
+		demoExternalElementsNewTab();
 
 		// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		Thread.sleep(5000);
 		driver.close();
 	}
+	
+	static void demoExternalElementsNewTab() throws InterruptedException {		
+		driver.get(baseUrlOfTestHtml);
+
+		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Thread.sleep(10000);
+
+		driver.switchTo().newWindow(WindowType.TAB);
+		driver.navigate().to("https://www.google.com?q=flowers");
+	}
 
 	// External elements (JavaScript alerts)
-	static void demoExternalElementsAlerts() throws InterruptedException {
-		String baseUrl = "file:///F:/Users/home/git/sl-nov23/PHASE5/hello-selenium/src/main/resources/test.html";
+	static void demoExternalElementsAlerts() throws InterruptedException {		
 
-		driver.get(baseUrl);
+		driver.get(baseUrlOfTestHtml);
 
 		Thread.sleep(5000);
 
