@@ -10,7 +10,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.WindowType;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -18,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AdvancedLocatingElements {
 	static WebDriver driver = new FirefoxDriver();
-	
+
 	static String baseUrlOfTestHtml = "file:///F:/Users/home/git/sl-nov23/PHASE5/hello-selenium/src/main/resources/test.html";
 
 	public static void main(String[] args) throws InterruptedException {
@@ -28,17 +27,44 @@ public class AdvancedLocatingElements {
 
 		// demoAdvancedXPathCSSSelector();
 		// demoTableDetails() ;
-		//demoExternalElementsAlerts();
-		
-		demoExternalElementsNewTab();
+		// demoExternalElementsAlerts();
+
+		// demoExternalElementsNewTab();
+
+		demoExternalElementsIFrame();
 
 		// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		Thread.sleep(5000);
 		driver.close();
 	}
-	
-	static void demoExternalElementsNewTab() throws InterruptedException {		
+
+	// body > div.container-fluid.td-outer > div.td-main > div >
+	// aside.d-none.d-xl-block.col-xl-2.td-sidebar-toc.d-print-none
+
+	static void demoExternalElementsIFrame() throws InterruptedException {
+		driver.get(baseUrlOfTestHtml);
+
+		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Thread.sleep(10000);
+		
+		driver.switchTo().frame("myframe");
+		
+		driver.findElement(By.xpath("/html/body/header/nav/div/div/div/div/button/span[1]/span")).click();
+		
+		Thread.sleep(5000);
+		
+		WebDriverWait explicitWaitForAlert = new WebDriverWait(driver, Duration.ofSeconds(30));
+		
+		explicitWaitForAlert.until(ExpectedConditions.visibilityOfElementLocated(By.id("#docsearch-input")));
+		
+		driver.findElement(By.id("#docsearch-input")).sendKeys("hello");
+		
+		driver.switchTo().defaultContent();
+		
+	}
+
+	static void demoExternalElementsNewTab() throws InterruptedException {
 		driver.get(baseUrlOfTestHtml);
 
 		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -49,7 +75,7 @@ public class AdvancedLocatingElements {
 	}
 
 	// External elements (JavaScript alerts)
-	static void demoExternalElementsAlerts() throws InterruptedException {		
+	static void demoExternalElementsAlerts() throws InterruptedException {
 
 		driver.get(baseUrlOfTestHtml);
 
@@ -59,16 +85,16 @@ public class AdvancedLocatingElements {
 
 		// alert will appear now, may be in 10 secs
 		WebDriverWait explicitWaitForAlert = new WebDriverWait(driver, Duration.ofSeconds(10));
-	
+
 		// Wait for the alert to be displayed
 		explicitWaitForAlert.until(ExpectedConditions.alertIsPresent());
-		
+
 		Alert alert = driver.switchTo().alert();
-		
+
 		System.out.printf("\n alert text is %s \n", alert.getText());
-		
+
 		Thread.sleep(10000);
-		
+
 		alert.accept();
 
 	}
