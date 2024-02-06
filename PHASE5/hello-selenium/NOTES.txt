@@ -1,1 +1,4 @@
 sir we have to give the titile and chrome extension url then it will redirect  to the chrome browser
+
+
+Programmatically the selection will happen in our programm? Then how it will be send to the webpage?

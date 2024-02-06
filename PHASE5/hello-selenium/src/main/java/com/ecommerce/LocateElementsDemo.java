@@ -39,11 +39,21 @@ public class LocateElementsDemo {
 		System.out.println("Successfully located Day Select List and set it to value 11");
 		
 		// Locate the Gender using CSS selector and set it to M/F/C
+		
 		WebElement gender= driver.findElement(By.cssSelector("span > span > input[type='radio'][value='1']"));
 		gender.click(); // selects Female
 		
 		System.out.println("Successfully located Gender radio feild and set it to value Female");
 		
+		//Locating image by its tag names
+		WebElement fbLogoImage = driver.findElement(By.tagName("img"));
+		String fbLogoImageSrc = fbLogoImage.getAttribute("src");
+		
+		System.out.println("FB Logo URL is : "+fbLogoImageSrc);
+		
+		//Locate a link and click it by matching its text.
+		WebElement alreadyAcctLink = driver.findElement(By.linkText("Already have an account?"));
+		alreadyAcctLink.click();
 
 	}
 
