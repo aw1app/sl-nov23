@@ -17,9 +17,9 @@ public class FileUploadDemo {
 
 	public static void main(String args[]) throws IOException, InterruptedException {
 		
-		uploadFileDemo();
+		//uploadFileDemo();
 		
-		//uploadFileUsingAutoITScript();
+		uploadFileUsingAutoITScript();
 		
 	}
 	
@@ -54,27 +54,23 @@ public class FileUploadDemo {
 		//String baseUrl = "https://demoqa.com/automation-practice-form";
 		driver.get(baseUrlOfTestHtml);
 
-		Thread.sleep(10000);
-
-		WebDriverWait explicitWaitForAlert = new WebDriverWait(driver, Duration.ofSeconds(30));
-
-		explicitWaitForAlert.until(ExpectedConditions.visibilityOfElementLocated(By.id("uploadPicture")));
+		Thread.sleep(10000);		
 
 		WebElement uploadFileElememt = driver.findElement(By.id("uploadPicture"));
 		
 		Actions actions = new Actions(driver);
-		actions.click(uploadFileElememt).click().perform();
+		actions.click(uploadFileElememt).perform();
 
 		System.out.println("uploadFileElememt details " + uploadFileElememt);
 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		// To call the AutoIt script
 		Runtime.getRuntime().exec("F:\\AutoIT-Projects\\fileupload.exe");
 		
 		Thread.sleep(5000);
 		
 		// 'close' method is used to close the browser window
-		driver.close();
+		//driver.close();
 
 	}
 
