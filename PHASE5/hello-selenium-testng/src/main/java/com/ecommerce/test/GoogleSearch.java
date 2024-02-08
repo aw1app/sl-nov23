@@ -30,7 +30,7 @@ public class GoogleSearch {
 	}
 
 	
-	@Test
+	@Test(groups={"Group1"})
 	public void searchGoogleAndTestTitleText() {
 		
 		System.out.printf("Inside %s and thread-id is %s \n", "searchGoogleAndTestTitleText", Thread.currentThread().getId());
@@ -42,6 +42,11 @@ public class GoogleSearch {
 		softAssert.assertEquals(driver.getTitle(), "Google");
 
 		softAssert.assertAll("Google title did not match");
+	}
+	
+	@Test(groups={"Group2"})
+	public void f3() {
+		System.out.printf("Inside %s and thread-id is %s \n", "f3 in GoogleSearch class in Group2", Thread.currentThread().getId());
 	}
 	
 	

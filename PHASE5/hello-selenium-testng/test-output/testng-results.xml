@@ -1,87 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-08T14:59:48 IST" name="Suite" finished-at="2024-02-08T14:59:56 IST" duration-ms="7947">
+  <suite started-at="2024-02-08T15:29:06 IST" name="Suite" finished-at="2024-02-08T15:29:10 IST" duration-ms="4051">
     <groups>
+      <group name="Group1">
+        <method signature="FBRegistration.f2()[pri:0, instance:com.ecommerce.test.FBRegistration@248e319b]" name="f2" class="com.ecommerce.test.FBRegistration"/>
+        <method signature="FBRegistration.fbAccount()[pri:0, instance:com.ecommerce.test.FBRegistration@248e319b]" name="fbAccount" class="com.ecommerce.test.FBRegistration"/>
+        <method signature="GoogleSearch.searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GoogleSearch@514646ef]" name="searchGoogleAndTestTitleText" class="com.ecommerce.test.GoogleSearch"/>
+      </group> <!-- Group1 -->
+      <group name="Group2">
+        <method signature="FBRegistration.f1()[pri:0, instance:com.ecommerce.test.FBRegistration@248e319b]" name="f1" class="com.ecommerce.test.FBRegistration"/>
+        <method signature="GoogleSearch.f3()[pri:0, instance:com.ecommerce.test.GoogleSearch@514646ef]" name="f3" class="com.ecommerce.test.GoogleSearch"/>
+      </group> <!-- Group2 -->
     </groups>
-    <test started-at="2024-02-08T14:59:48 IST" name="FB Test" finished-at="2024-02-08T14:59:53 IST" duration-ms="4955">
+    <test started-at="2024-02-08T15:29:06 IST" name="FB Test" finished-at="2024-02-08T15:29:06 IST" duration-ms="182">
       <class name="com.ecommerce.test.FBRegistration">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="beforeTest" finished-at="2024-02-08T14:59:48 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="beforeClass" finished-at="2024-02-08T14:59:48 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="beforeMethod" finished-at="2024-02-08T14:59:48 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="beforeMethod" finished-at="2024-02-08T14:59:48 IST" duration-ms="8" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="beforeMethod" finished-at="2024-02-08T14:59:48 IST" duration-ms="8" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="f1()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="f1" finished-at="2024-02-08T14:59:48 IST" duration-ms="37" status="PASS">
+        <test-method signature="f1()[pri:0, instance:com.ecommerce.test.FBRegistration@248e319b]" started-at="2024-02-08T15:29:06 IST" name="f1" finished-at="2024-02-08T15:29:06 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f1 -->
-        <test-method signature="f2()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="f2" finished-at="2024-02-08T14:59:48 IST" duration-ms="28" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f2 -->
-        <test-method signature="fbAccount()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="fbAccount" finished-at="2024-02-08T14:59:53 IST" duration-ms="4843" status="PASS">
+        <test-method signature="fbAccount()[pri:0, instance:com.ecommerce.test.FBRegistration@248e319b]" started-at="2024-02-08T15:29:06 IST" name="fbAccount" finished-at="2024-02-08T15:29:06 IST" duration-ms="8" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+at com.ecommerce.test.FBRegistration.fbAccount(FBRegistration.java:80)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fbAccount -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="afterMethod" finished-at="2024-02-08T14:59:48 IST" duration-ms="4" status="PASS">
+        <test-method signature="f2()[pri:0, instance:com.ecommerce.test.FBRegistration@248e319b]" started-at="2024-02-08T15:29:06 IST" name="f2" depends-on-groups="Group2" finished-at="2024-02-08T15:29:06 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="afterMethod" finished-at="2024-02-08T14:59:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:53 IST" name="afterMethod" finished-at="2024-02-08T14:59:53 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:53 IST" name="afterClass" finished-at="2024-02-08T14:59:53 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:53 IST" name="afterTest" finished-at="2024-02-08T14:59:53 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
+        </test-method> <!-- f2 -->
       </class> <!-- com.ecommerce.test.FBRegistration -->
     </test> <!-- FB Test -->
-    <test started-at="2024-02-08T14:59:53 IST" name="Google Test" finished-at="2024-02-08T14:59:56 IST" duration-ms="2841">
-      <class name="com.ecommerce.test.FBRegistration">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:23 IST" name="beforeSuite" finished-at="2024-02-08T14:59:37 IST" duration-ms="13277" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:56 IST" name="afterSuite" finished-at="2024-02-08T15:00:01 IST" duration-ms="5370" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.ecommerce.test.FBRegistration -->
+    <test started-at="2024-02-08T15:29:07 IST" name="Google Test" finished-at="2024-02-08T15:29:10 IST" duration-ms="3667">
       <class name="com.ecommerce.test.GoogleSearch">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@1033576a]" started-at="2024-02-08T14:59:37 IST" name="beforeSuite" finished-at="2024-02-08T14:59:48 IST" duration-ms="11014" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@514646ef]" started-at="2024-02-08T15:28:52 IST" name="beforeSuite" finished-at="2024-02-08T15:29:06 IST" duration-ms="14306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method signature="searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GoogleSearch@1033576a]" started-at="2024-02-08T14:59:53 IST" name="searchGoogleAndTestTitleText" finished-at="2024-02-08T14:59:56 IST" duration-ms="2832" status="PASS">
+        <test-method signature="f3()[pri:0, instance:com.ecommerce.test.GoogleSearch@514646ef]" started-at="2024-02-08T15:29:07 IST" name="f3" finished-at="2024-02-08T15:29:07 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f3 -->
+        <test-method signature="searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GoogleSearch@514646ef]" started-at="2024-02-08T15:29:07 IST" name="searchGoogleAndTestTitleText" finished-at="2024-02-08T15:29:10 IST" duration-ms="3645" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchGoogleAndTestTitleText -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@1033576a]" started-at="2024-02-08T15:00:01 IST" name="afterSuite" finished-at="2024-02-08T15:00:03 IST" duration-ms="2080" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@514646ef]" started-at="2024-02-08T15:29:10 IST" name="afterSuite" finished-at="2024-02-08T15:29:14 IST" duration-ms="3515" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

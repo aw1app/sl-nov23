@@ -70,7 +70,7 @@ public class FBRegistration {
 		System.out.printf("Inside %s and thread-id is %s \n", "afterMethod", Thread.currentThread().getId());
 	}
 
-	@Test
+	@Test(groups={"Group1"})
 	public void fbAccount() {
 		
 		System.out.printf("Inside %s and thread-id is %s \n", "fbAccount", Thread.currentThread().getId());
@@ -102,14 +102,14 @@ public class FBRegistration {
 
 	
 	
-	@Test
+	@Test(groups={"Group2"})
 	public void f1() {
-		System.out.printf("Inside %s and thread-id is %s \n", "f1", Thread.currentThread().getId());
+		System.out.printf("Inside %s and thread-id is %s \n", "f1 of Group2", Thread.currentThread().getId());
 	}
 	
-	@Test
+	@Test(groups={"Group1"}, dependsOnGroups = {"Group2"})
 	public void f2() {
-		System.out.printf("Inside %s and thread-id is %s \n", "f2", Thread.currentThread().getId());
+		System.out.printf("Inside %s and thread-id is %s \n", "f2 of Group1, depends of Group2", Thread.currentThread().getId());
 	}
 
 }

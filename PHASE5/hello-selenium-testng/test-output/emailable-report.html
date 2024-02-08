@@ -9,16 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">FB Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4,955</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Google Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">2,841</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">7,796</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">FB Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">182</td><td>Group1, Group2</td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Google Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">3,667</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">3,849</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">FB Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.ecommerce.test.FBRegistration</td><td><a href="#m0">f1</a></td><td rowspan="1">1707384588158</td><td rowspan="1">37</td></tr><tr class="passedeven"><td><a href="#m1">f2</a></td><td rowspan="1">1707384588160</td><td rowspan="1">28</td></tr><tr class="passedeven"><td><a href="#m2">fbAccount</a></td><td rowspan="1">1707384588160</td><td rowspan="1">4843</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Google Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.ecommerce.test.GoogleSearch</td><td><a href="#m3">searchGoogleAndTestTitleText</a></td><td rowspan="1">1707384593177</td><td rowspan="1">2832</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">FB Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ecommerce.test.FBRegistration</td><td><a href="#m0">fbAccount</a></td><td rowspan="1">1707386346835</td><td rowspan="1">8</td></tr><tr><th colspan="4">FB Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.ecommerce.test.FBRegistration</td><td><a href="#m1">f1</a></td><td rowspan="1">1707386346796</td><td rowspan="1">13</td></tr><tr class="passedeven"><td><a href="#m2">f2</a></td><td rowspan="1">1707386346885</td><td rowspan="1">6</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Google Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.ecommerce.test.GoogleSearch</td><td><a href="#m3">f3</a></td><td rowspan="1">1707386347107</td><td rowspan="1">5</td></tr><tr class="passedeven"><td><a href="#m4">searchGoogleAndTestTitleText</a></td><td rowspan="1">1707386347121</td><td rowspan="1">3645</td></tr></tbody>
 </table>
-<h2>FB Test</h2><h3 id="m0">com.ecommerce.test.FBRegistration#f1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.ecommerce.test.FBRegistration#f2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.ecommerce.test.FBRegistration#fbAccount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Google Test</h2><h3 id="m3">com.ecommerce.test.GoogleSearch#searchGoogleAndTestTitleText</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>FB Test</h2><h3 id="m0">com.ecommerce.test.FBRegistration#fbAccount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at com.ecommerce.test.FBRegistration.fbAccount(FBRegistration.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.ecommerce.test.FBRegistration#f1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.ecommerce.test.FBRegistration#f2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Google Test</h2><h3 id="m3">com.ecommerce.test.GoogleSearch#f3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.ecommerce.test.GoogleSearch#searchGoogleAndTestTitleText</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
