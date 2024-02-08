@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-08T15:45:47 IST" name="Default suite" finished-at="2024-02-08T15:45:52 IST" duration-ms="4952">
+  <suite started-at="2024-02-08T15:47:34 IST" name="Default suite" finished-at="2024-02-08T15:48:01 IST" duration-ms="26587">
     <groups>
       <group name="Group1">
         <method signature="GoogleSearch.searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" name="searchGoogleAndTestTitleText" class="com.ecommerce.test.GoogleSearch"/>
@@ -11,65 +11,53 @@
         <method signature="GoogleSearch.f3()[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" name="f3" class="com.ecommerce.test.GoogleSearch"/>
       </group> <!-- Group2 -->
     </groups>
-    <test started-at="2024-02-08T15:45:47 IST" name="Default test" finished-at="2024-02-08T15:45:52 IST" duration-ms="4952">
+    <test started-at="2024-02-08T15:47:34 IST" name="Default test" finished-at="2024-02-08T15:48:01 IST" duration-ms="26587">
       <class name="com.ecommerce.test.GoogleSearch">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:45:34 IST" name="beforeSuite" finished-at="2024-02-08T15:45:47 IST" duration-ms="13430" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:47:22 IST" name="beforeSuite" finished-at="2024-02-08T15:47:34 IST" duration-ms="12509" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method signature="f3()[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:45:47 IST" name="f3" finished-at="2024-02-08T15:45:47 IST" duration-ms="7" status="PASS">
+        <test-method signature="f3()[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:47:34 IST" name="f3" finished-at="2024-02-08T15:47:34 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f3 -->
-        <test-method signature="googleNewAccCreation(java.lang.String,java.lang.String)[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:45:47 IST" name="googleNewAccCreation" finished-at="2024-02-08T15:45:47 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Cannot inject @Test annotated Method [googleNewAccCreation] with [class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Cannot inject @Test annotated Method [googleNewAccCreation] with [class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:436)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:350)
-at org.testng.internal.Parameters.createParameters(Parameters.java:693)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:911)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method signature="googleNewAccCreation(java.lang.String,java.lang.String)[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:47:34 IST" name="googleNewAccCreation" data-provider="googleNewUserData" finished-at="2024-02-08T15:47:48 IST" duration-ms="13724" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fname1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[lname1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleNewAccCreation -->
-        <test-method signature="searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:45:47 IST" name="searchGoogleAndTestTitleText" finished-at="2024-02-08T15:45:52 IST" duration-ms="4856" status="PASS">
+        <test-method signature="googleNewAccCreation(java.lang.String,java.lang.String)[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:47:48 IST" name="googleNewAccCreation" data-provider="googleNewUserData" finished-at="2024-02-08T15:48:00 IST" duration-ms="11356" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fname2__2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[lname2__2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleNewAccCreation -->
+        <test-method signature="searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:48:00 IST" name="searchGoogleAndTestTitleText" finished-at="2024-02-08T15:48:01 IST" duration-ms="1377" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchGoogleAndTestTitleText -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:45:52 IST" name="afterSuite" finished-at="2024-02-08T15:45:57 IST" duration-ms="4669" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@3f191845]" started-at="2024-02-08T15:48:01 IST" name="afterSuite" finished-at="2024-02-08T15:48:05 IST" duration-ms="3542" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
