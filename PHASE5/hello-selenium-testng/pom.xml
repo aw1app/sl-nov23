@@ -40,6 +40,7 @@
 		</dependency>
 
 		<!-- ReportNG -->
+		
 		<dependency>
 			<groupId>org.uncommons</groupId>
 			<artifactId>reportng</artifactId>
@@ -50,6 +51,8 @@
 			<artifactId>guice</artifactId>
 			<version>4.2.2</version>
 		</dependency>
+		
+		
 		
 	</dependencies>	
 	
@@ -72,6 +75,7 @@
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles> 
 					
+					
 					<properties>
 						<property>
 							<name>usedefaultlisteners</name>
@@ -84,6 +88,7 @@
 							</value>
 						</property>
 					</properties>
+					
 					
 				</configuration>			
 			</plugin>

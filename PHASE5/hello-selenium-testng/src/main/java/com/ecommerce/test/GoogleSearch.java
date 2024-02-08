@@ -57,11 +57,16 @@ public class GoogleSearch {
 
 		// Locate the first name feild using id
 		WebElement firstNameTF = driver.findElement(By.id("firstName"));
+		
+		softAssert.assertNotNull(firstNameTF);
 
 		firstNameTF.sendKeys(firstName);
 
 		// Locate the last name feild using name
 		WebElement lastNameTF = driver.findElement(By.name("lastName"));
+		
+		softAssert.assertNotNull(lastNameTF);
+		
 		lastNameTF.sendKeys(lastName);
 		
 		Thread.sleep(10000);
