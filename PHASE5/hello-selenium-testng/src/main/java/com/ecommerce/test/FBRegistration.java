@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+@Test(groups= {"Group0"})
 public class FBRegistration {
 
 	public WebDriver driver;

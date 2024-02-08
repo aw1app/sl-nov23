@@ -1,9 +1,12 @@
 package com.ecommerce.test;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -42,6 +45,36 @@ public class GoogleSearch {
 		softAssert.assertEquals(driver.getTitle(), "Google");
 
 		softAssert.assertAll("Google title did not match");
+	}
+	
+	
+	@Test(dataProvider = "googleNewUserData")
+	public void googleNewAccCreation(String firstName, String lastName) throws InterruptedException {
+
+		String baseUrl = "https://accounts.google.com/signup/v2/createaccount?flowEntry=SignUp";
+
+		driver.get(baseUrl);
+
+		// Locate the first name feild using id
+		WebElement firstNameTF = driver.findElement(By.id("firstName"));
+
+		firstNameTF.sendKeys(firstName);
+
+		// Locate the last name feild using name
+		WebElement lastNameTF = driver.findElement(By.name("lastName"));
+		lastNameTF.sendKeys(lastName);
+		
+		Thread.sleep(10000);
+		
+	}
+	
+	@DataProvider(name = "googleNewUserData")
+	public Object[][] googleNewUserData() {
+		return new Object[][] {
+
+				{ "fname1", "lname1" },
+				{ "fname2__2", "lname2__2" }
+			};
 	}
 	
 	@Test(groups={"Group2"})

@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ecommerce.test.FBRegistration">
+      <class name="com.ecommerce.test.GoogleSearch">
         <methods>
-          <include name="fbAccount"/>
-          <include name="searchGoogleAndTestTitleText"/>
+          <include name="googleNewAccCreation"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
         </methods>
-      </class> <!-- com.ecommerce.test.FBRegistration -->
+      </class> <!-- com.ecommerce.test.GoogleSearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
