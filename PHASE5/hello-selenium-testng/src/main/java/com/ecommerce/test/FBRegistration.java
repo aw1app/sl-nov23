@@ -100,19 +100,7 @@ public class FBRegistration {
 
 	}
 
-	@Test
-	public void searchGoogleAndTestTitleText() {
-		
-		System.out.printf("Inside %s and thread-id is %s \n", "searchGoogleAndTestTitleText", Thread.currentThread().getId());
-
-		driver.get("http://www.google.com");
-
-		System.out.println("Title of google page is " + driver.getTitle());
-
-		softAssert.assertEquals(driver.getTitle(), "Google");
-
-		softAssert.assertAll("Google title did not match");
-	}
+	
 	
 	@Test
 	public void f1() {

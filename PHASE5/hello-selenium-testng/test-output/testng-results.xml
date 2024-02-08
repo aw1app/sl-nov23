@@ -1,141 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-08T14:49:17 IST" name="Suite" finished-at="2024-02-08T14:49:24 IST" duration-ms="7367">
+  <suite started-at="2024-02-08T14:59:48 IST" name="Suite" finished-at="2024-02-08T14:59:56 IST" duration-ms="7947">
     <groups>
     </groups>
-    <test started-at="2024-02-08T14:49:17 IST" name="Smoke Test" finished-at="2024-02-08T14:49:24 IST" duration-ms="7367">
+    <test started-at="2024-02-08T14:59:48 IST" name="FB Test" finished-at="2024-02-08T14:59:53 IST" duration-ms="4955">
       <class name="com.ecommerce.test.FBRegistration">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:04 IST" name="beforeSuite" finished-at="2024-02-08T14:49:17 IST" duration-ms="13082" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="beforeTest" finished-at="2024-02-08T14:49:17 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="beforeTest" finished-at="2024-02-08T14:59:48 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="beforeClass" finished-at="2024-02-08T14:49:17 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="beforeClass" finished-at="2024-02-08T14:59:48 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="beforeMethod" finished-at="2024-02-08T14:49:17 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="beforeMethod" finished-at="2024-02-08T14:59:48 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="beforeMethod" finished-at="2024-02-08T14:49:17 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="beforeMethod" finished-at="2024-02-08T14:59:48 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="beforeMethod" finished-at="2024-02-08T14:49:17 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="beforeMethod" finished-at="2024-02-08T14:59:48 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="beforeMethod" finished-at="2024-02-08T14:49:17 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="f1()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="f1" finished-at="2024-02-08T14:49:17 IST" duration-ms="43" status="PASS">
+        <test-method signature="f1()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="f1" finished-at="2024-02-08T14:59:48 IST" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f1 -->
-        <test-method signature="f2()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="f2" finished-at="2024-02-08T14:49:17 IST" duration-ms="32" status="PASS">
+        <test-method signature="f2()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="f2" finished-at="2024-02-08T14:59:48 IST" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f2 -->
-        <test-method signature="fbAccount()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="fbAccount" finished-at="2024-02-08T14:49:24 IST" duration-ms="7247" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Either Day or Gender element was not located OR gender selection failed
-expected [Google] but found [Sign up for Facebook | Facebook]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Either Day or Gender element was not located OR gender selection failed
-expected [Google] but found [Sign up for Facebook | Facebook]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at com.ecommerce.test.FBRegistration.fbAccount(FBRegistration.java:99)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="fbAccount()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="fbAccount" finished-at="2024-02-08T14:59:53 IST" duration-ms="4843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fbAccount -->
-        <test-method signature="searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="searchGoogleAndTestTitleText" finished-at="2024-02-08T14:49:23 IST" duration-ms="6410" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Google title did not match
-expected [Google] but found [Sign up for Facebook | Facebook]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Google title did not match
-expected [Google] but found [Sign up for Facebook | Facebook]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at com.ecommerce.test.FBRegistration.searchGoogleAndTestTitleText(FBRegistration.java:114)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchGoogleAndTestTitleText -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="afterMethod" finished-at="2024-02-08T14:49:17 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="afterMethod" finished-at="2024-02-08T14:59:48 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:17 IST" name="afterMethod" finished-at="2024-02-08T14:49:17 IST" duration-ms="24" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:48 IST" name="afterMethod" finished-at="2024-02-08T14:59:48 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:23 IST" name="afterMethod" finished-at="2024-02-08T14:49:23 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:53 IST" name="afterMethod" finished-at="2024-02-08T14:59:53 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:24 IST" name="afterMethod" finished-at="2024-02-08T14:49:24 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:24 IST" name="afterClass" finished-at="2024-02-08T14:49:24 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:53 IST" name="afterClass" finished-at="2024-02-08T14:59:53 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:24 IST" name="afterTest" finished-at="2024-02-08T14:49:24 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:53 IST" name="afterTest" finished-at="2024-02-08T14:59:53 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:49:24 IST" name="afterSuite" finished-at="2024-02-08T14:49:27 IST" duration-ms="2763" status="PASS">
+      </class> <!-- com.ecommerce.test.FBRegistration -->
+    </test> <!-- FB Test -->
+    <test started-at="2024-02-08T14:59:53 IST" name="Google Test" finished-at="2024-02-08T14:59:56 IST" duration-ms="2841">
+      <class name="com.ecommerce.test.FBRegistration">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:23 IST" name="beforeSuite" finished-at="2024-02-08T14:59:37 IST" duration-ms="13277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.FBRegistration@79e4c792]" started-at="2024-02-08T14:59:56 IST" name="afterSuite" finished-at="2024-02-08T15:00:01 IST" duration-ms="5370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.ecommerce.test.FBRegistration -->
-    </test> <!-- Smoke Test -->
+      <class name="com.ecommerce.test.GoogleSearch">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@1033576a]" started-at="2024-02-08T14:59:37 IST" name="beforeSuite" finished-at="2024-02-08T14:59:48 IST" duration-ms="11014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method signature="searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GoogleSearch@1033576a]" started-at="2024-02-08T14:59:53 IST" name="searchGoogleAndTestTitleText" finished-at="2024-02-08T14:59:56 IST" duration-ms="2832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchGoogleAndTestTitleText -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@1033576a]" started-at="2024-02-08T15:00:01 IST" name="afterSuite" finished-at="2024-02-08T15:00:03 IST" duration-ms="2080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.ecommerce.test.GoogleSearch -->
+    </test> <!-- Google Test -->
   </suite> <!-- Suite -->
 </testng-results>
