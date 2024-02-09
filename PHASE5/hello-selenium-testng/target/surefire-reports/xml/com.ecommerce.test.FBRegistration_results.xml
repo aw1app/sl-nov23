@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="14.501">
+  <properties />
+  
+  
+            <testcase name="f2" time="0.004" classname="com.ecommerce.test.FBRegistration" />
+                <testcase name="fbAccount" time="14.491" classname="com.ecommerce.test.FBRegistration" />
+                <testcase name="f1" time="0.006" classname="com.ecommerce.test.FBRegistration" />
+      
+</testsuite>

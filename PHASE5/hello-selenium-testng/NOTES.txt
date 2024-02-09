@@ -1,0 +1,4 @@
+Download selenium server jar
+
+java -jar selenium-server-4.17.0.jar hub
+
