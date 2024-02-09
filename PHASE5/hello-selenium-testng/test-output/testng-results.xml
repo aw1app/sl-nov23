@@ -1,137 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-08T16:44:24 IST" name="Suite" finished-at="2024-02-08T16:45:05 IST" duration-ms="40674">
+  <suite started-at="2024-02-09T15:21:41 IST" name="Default suite" finished-at="2024-02-09T15:21:45 IST" duration-ms="3861">
     <groups>
       <group name="Group1">
-        <method signature="FBRegistration.f2()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" name="f2" class="com.ecommerce.test.FBRegistration"/>
-        <method signature="FBRegistration.fbAccount()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" name="fbAccount" class="com.ecommerce.test.FBRegistration"/>
-        <method signature="GoogleSearch.searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GoogleSearch@7ce026d3]" name="searchGoogleAndTestTitleText" class="com.ecommerce.test.GoogleSearch"/>
+        <method signature="GridTest.searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GridTest@72cc7e6f]" name="searchGoogleAndTestTitleText" class="com.ecommerce.test.GridTest"/>
       </group> <!-- Group1 -->
       <group name="Group2">
-        <method signature="FBRegistration.f1()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" name="f1" class="com.ecommerce.test.FBRegistration"/>
-        <method signature="GoogleSearch.f3()[pri:0, instance:com.ecommerce.test.GoogleSearch@7ce026d3]" name="f3" class="com.ecommerce.test.GoogleSearch"/>
+        <method signature="GridTest.f3()[pri:0, instance:com.ecommerce.test.GridTest@72cc7e6f]" name="f3" class="com.ecommerce.test.GridTest"/>
       </group> <!-- Group2 -->
-      <group name="Group0">
-        <method signature="FBRegistration.f1()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" name="f1" class="com.ecommerce.test.FBRegistration"/>
-        <method signature="FBRegistration.f2()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" name="f2" class="com.ecommerce.test.FBRegistration"/>
-        <method signature="FBRegistration.fbAccount()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" name="fbAccount" class="com.ecommerce.test.FBRegistration"/>
-      </group> <!-- Group0 -->
     </groups>
-    <test started-at="2024-02-08T16:44:24 IST" name="Test" finished-at="2024-02-08T16:45:05 IST" duration-ms="40674">
-      <class name="com.ecommerce.test.FBRegistration">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:43:55 IST" name="beforeSuite" finished-at="2024-02-08T16:44:08 IST" duration-ms="13499" status="PASS">
+    <test started-at="2024-02-09T15:21:41 IST" name="Default test" finished-at="2024-02-09T15:21:45 IST" duration-ms="3861">
+      <class name="com.ecommerce.test.GridTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.GridTest@72cc7e6f]" started-at="2024-02-09T15:21:04 IST" name="beforeSuite" finished-at="2024-02-09T15:21:41 IST" duration-ms="37259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:44:24 IST" name="beforeTest" finished-at="2024-02-08T16:44:24 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:44:24 IST" name="beforeClass" finished-at="2024-02-08T16:44:24 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:44:24 IST" name="beforeMethod" finished-at="2024-02-08T16:44:24 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="f1()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:44:24 IST" name="f1" finished-at="2024-02-08T16:44:24 IST" duration-ms="12" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f1 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:44:24 IST" name="afterMethod" finished-at="2024-02-08T16:44:24 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:44:24 IST" name="beforeMethod" finished-at="2024-02-08T16:44:24 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="fbAccount()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:44:24 IST" name="fbAccount" finished-at="2024-02-08T16:44:32 IST" duration-ms="7716" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fbAccount -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:44:32 IST" name="afterMethod" finished-at="2024-02-08T16:44:32 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:45:05 IST" name="beforeMethod" finished-at="2024-02-08T16:45:05 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="f2()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:45:05 IST" name="f2" depends-on-groups="Group2" finished-at="2024-02-08T16:45:05 IST" duration-ms="7" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f2 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:45:05 IST" name="afterMethod" finished-at="2024-02-08T16:45:05 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:45:05 IST" name="afterClass" finished-at="2024-02-08T16:45:05 IST" duration-ms="7" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:45:05 IST" name="afterTest" finished-at="2024-02-08T16:45:05 IST" duration-ms="8" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.FBRegistration@33bc72d1]" started-at="2024-02-08T16:45:05 IST" name="afterSuite" finished-at="2024-02-08T16:45:11 IST" duration-ms="5504" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.ecommerce.test.FBRegistration -->
-      <class name="com.ecommerce.test.GoogleSearch">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@7ce026d3]" started-at="2024-02-08T16:44:08 IST" name="beforeSuite" finished-at="2024-02-08T16:44:24 IST" duration-ms="15779" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method signature="f3()[pri:0, instance:com.ecommerce.test.GoogleSearch@7ce026d3]" started-at="2024-02-08T16:44:32 IST" name="f3" finished-at="2024-02-08T16:44:32 IST" duration-ms="14" status="PASS">
+        <test-method signature="f3()[pri:0, instance:com.ecommerce.test.GridTest@72cc7e6f]" started-at="2024-02-09T15:21:41 IST" name="f3" finished-at="2024-02-09T15:21:41 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f3 -->
-        <test-method signature="googleNewAccCreation(java.lang.String,java.lang.String)[pri:0, instance:com.ecommerce.test.GoogleSearch@7ce026d3]" started-at="2024-02-08T16:44:32 IST" name="googleNewAccCreation" data-provider="googleNewUserData" finished-at="2024-02-08T16:44:51 IST" duration-ms="19542" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[fname1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[lname1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- googleNewAccCreation -->
-        <test-method signature="googleNewAccCreation(java.lang.String,java.lang.String)[pri:0, instance:com.ecommerce.test.GoogleSearch@7ce026d3]" started-at="2024-02-08T16:44:51 IST" name="googleNewAccCreation" data-provider="googleNewUserData" finished-at="2024-02-08T16:45:03 IST" duration-ms="11627" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[fname2__2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[lname2__2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- googleNewAccCreation -->
-        <test-method signature="searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GoogleSearch@7ce026d3]" started-at="2024-02-08T16:45:03 IST" name="searchGoogleAndTestTitleText" finished-at="2024-02-08T16:45:05 IST" duration-ms="1504" status="PASS">
+        <test-method signature="searchGoogleAndTestTitleText()[pri:0, instance:com.ecommerce.test.GridTest@72cc7e6f]" started-at="2024-02-09T15:21:42 IST" name="searchGoogleAndTestTitleText" finished-at="2024-02-09T15:21:45 IST" duration-ms="3743" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchGoogleAndTestTitleText -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.GoogleSearch@7ce026d3]" started-at="2024-02-08T16:45:11 IST" name="afterSuite" finished-at="2024-02-08T16:45:14 IST" duration-ms="3271" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecommerce.test.GridTest@72cc7e6f]" started-at="2024-02-09T15:21:46 IST" name="afterSuite" finished-at="2024-02-09T15:21:50 IST" duration-ms="4046" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.ecommerce.test.GoogleSearch -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.ecommerce.test.GridTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
