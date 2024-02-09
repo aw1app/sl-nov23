@@ -1,4 +1,11 @@
 Download selenium server jar
 
+On a command window:
 java -jar selenium-server-4.17.0.jar hub
+
+Open another window:
+java -jar selenium-server-4.17.0.jar node --port 5555 --hub http://192.168.59.1:4444 --selenium-manager true
+
+Open another window ( to create another node):
+java -jar selenium-server-4.17.0.jar node --port 6666 --hub http://192.168.59.1:4444 --selenium-manager true
 
