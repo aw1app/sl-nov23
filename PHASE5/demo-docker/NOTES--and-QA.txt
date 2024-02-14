@@ -1,0 +1,3 @@
+Sir but let say we created one image which has db connection and it's successfully running in docker. 
+But how will it run if we will share the same image with another person?
+Means how the db will be configured there?
