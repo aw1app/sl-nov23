@@ -15,96 +15,18 @@ pipeline{
             
         }
         
-        stage('Maven Build Jar' ) {
-            
-            steps {
-               dir('PHASE5/demo-docker'){
-				sh "mvn clean pipeline{
-    
-    agent any 
-   
-    
-    
-    stages {
-        
-        
-        stage('Checkout from GitHub' ) {
-            
-             steps {
-                 git branch: 'main', url:"https://github.com/aw1app/sl-nov23.git"
-             }
-            
-        }
-        
-        stage('Maven Build Jar' ) {
-            
-            steps {
-               dir('PHASE5/demo-docker'){
-				sh "mvn -Dmaven.test.skip=true clean package"
-				}
-            }
-            
-        }
-        
-        stage('Create Docker Image' ) {
-            
-            steps {
-               dir('PHASE5/demo-docker'){
-				sh "docker build -t demo-docker ."
-				}
-            }
-           
-        
-        
-    }
-    
-}pipeline{
-    
-    agent any 
-   
-    
-    
-    stages {
-        
-        
-        stage('Checkout from GitHub' ) {
-            
-             steps {
-                 git branch: 'main', url:"https://github.com/aw1app/sl-nov23.git"
-             }
-            
-        }
-        
-        stage('Maven Build Jar' ) {
+        stage('Maven Test Automation' ) {
             
             steps {
                dir('PHASE5/hello-selenium-testng'){
-				sh "mvn -Dmaven.test.skip=true clean test"
-				}
+				sh "mvn clean package"         
+        	}	       
+        
             }
             
         }
         
-       
-           
-        
-        
-    }
-    
-}package"
-				}
-            }
-            
-        }
-        
-        stage('Create Docker Image' ) {
-            
-            steps {
-               dir('PHASE5/demo-docker'){
-				sh "docker build -t demo-docker ."
-				}
-            }
-           
+                 
         
         
     }
