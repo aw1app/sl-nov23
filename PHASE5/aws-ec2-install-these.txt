@@ -18,6 +18,7 @@ sudo usermod -a -G docker ec2-user
 newgrp docker
 sudo systemctl start docker
 
+curl https://sg.mirror.servanamanaged.com/jenkins/war-stable/2.426.3/jenkins.war -o jenkins.war
 
 NEXT 
 docker swarm init
@@ -26,3 +27,25 @@ docker swarm join --token SWMTKN-1-2c053tfm5hy6ny0hkijabswb0pe5c5905vq51wjpc0g3f
 
 ON MANAGER NODE:
 docker service create --name spring-webapp --publish 8000:8081 --replicas 2 aw1app/hello-docker-phase5
+
+
+class Book{
+bName:
+bPages:
+}
+
+class Author{
+name:
+age:
+
+books:Book[] ;
+
+}
+
+{
+name:
+age:
+books:[ {bName:"asasa"}
+]
+
+}
