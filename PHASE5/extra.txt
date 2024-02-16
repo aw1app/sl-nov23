@@ -1,1 +1,23 @@
 #some helpful notes
+
+Dockerfile for angular project (create at the root of your angular project where package.json is there):
+
+FROM node:alpine AS build
+WORKDIR /app
+COPY / ./
+COPY package*.json ./
+
+RUN npm install -g @angular/cli && npm install && ng build
+COPY . .
+
+#STAGE 2: Run 
+FROM nginx:alpine
+WORKDIR /app
+COPY --from=build /app/dist/browser /usr/share/nginx/html
+
+
+STEP 2:
+docker build -t my-angular-project-docker .
+
+STEP 3:
+docker run -it -p 80:80 my-angular-project-docker
