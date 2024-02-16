@@ -17,3 +17,12 @@ sudo yum install docker -y
 sudo usermod -a -G docker ec2-user
 newgrp docker
 sudo systemctl start docker
+
+
+NEXT 
+docker swarm init
+
+docker swarm join --token SWMTKN-1-2c053tfm5hy6ny0hkijabswb0pe5c5905vq51wjpc0g3fs9qqf-8wtl382l2lwxjxh31a3ktd1cu 172.31.23.29:2377
+
+ON MANAGER NODE:
+docker service create --name spring-webapp --publish 8000:8081 --replicas 2 aw1app/hello-docker-phase5
