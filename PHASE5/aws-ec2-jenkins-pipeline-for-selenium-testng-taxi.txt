@@ -19,7 +19,7 @@ pipeline{
             
             steps {
                dir('PHASE5/hello-selenium-testng'){
-				sh "mvn clean package"         
+				sh "mvn clean test"         
         	}	       
         
             }
