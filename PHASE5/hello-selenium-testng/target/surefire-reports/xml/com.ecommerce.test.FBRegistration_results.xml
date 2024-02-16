@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="14.501">
+           time="7.492">
   <properties />
   
   
-            <testcase name="f2" time="0.004" classname="com.ecommerce.test.FBRegistration" />
-                <testcase name="fbAccount" time="14.491" classname="com.ecommerce.test.FBRegistration" />
-                <testcase name="f1" time="0.006" classname="com.ecommerce.test.FBRegistration" />
+            <testcase name="f1" time="0.009" classname="com.ecommerce.test.FBRegistration" />
+                <testcase name="f2" time="0.005" classname="com.ecommerce.test.FBRegistration" />
+                <testcase name="fbAccount" time="7.478" classname="com.ecommerce.test.FBRegistration" />
       
 </testsuite>

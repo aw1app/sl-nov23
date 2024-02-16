@@ -18,9 +18,12 @@ sudo usermod -a -G docker ec2-user
 newgrp docker
 sudo systemctl start docker
 
+#ON the EC2 you want install Jenkins (for CICD pipeline)
 curl https://sg.mirror.servanamanaged.com/jenkins/war-stable/2.426.3/jenkins.war -o jenkins.war
 
-NEXT 
+java -jar jenkins.war --httpPort=10000
+
+NEXT (if you want to use docker swarm)
 docker swarm init
 
 docker swarm join --token SWMTKN-1-2c053tfm5hy6ny0hkijabswb0pe5c5905vq51wjpc0g3fs9qqf-8wtl382l2lwxjxh31a3ktd1cu 172.31.23.29:2377

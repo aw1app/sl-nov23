@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="25.433">
+           time="38.900">
   <properties />
   
   
-            <testcase name="f3" time="0.004" classname="com.ecommerce.test.GoogleSearch" />
-                <testcase name="googleNewAccCreation" time="11.385" classname="com.ecommerce.test.GoogleSearch" />
-                <testcase name="googleNewAccCreation" time="12.840" classname="com.ecommerce.test.GoogleSearch" />
-                <testcase name="searchGoogleAndTestTitleText" time="1.204" classname="com.ecommerce.test.GoogleSearch" />
+            <testcase name="googleNewAccCreation" time="20.499" classname="com.ecommerce.test.GoogleSearch" />
+                <testcase name="googleNewAccCreation" time="15.783" classname="com.ecommerce.test.GoogleSearch" />
+                <testcase name="f3" time="0.001" classname="com.ecommerce.test.GoogleSearch" />
+                <testcase name="searchGoogleAndTestTitleText" time="2.617" classname="com.ecommerce.test.GoogleSearch" />
       
 </testsuite>
